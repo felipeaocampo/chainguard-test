@@ -2,11 +2,22 @@ import { GetStaticProps } from "next";
 import { Asset } from "contentful";
 import { client } from "@/lib/client";
 import Image from "next/image";
+import {
+  TypePageSection,
+  TypePageSectionSkeleton,
+} from "../../types/contentful";
+import { fetchPageSection, fetchPageSections } from "@/lib/pageSection";
+import { ContentImage } from "@/lib/contentImage";
 
 // const client = createClient({
 //   space: process.env.CONTENTFUL_SPACE_ID,
 //   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 // });
+
+type typeTestA = keyof any;
+// let typeTestB: TypePageSectionSkeleton;
+
+console.log();
 
 type HomePageFields = {
   pagesectionName: string;
@@ -81,9 +92,7 @@ type TLogo = {
 type HomePageProps = {
   heroHeading: string;
   heroSubHeading: string;
-  heroImgUrl: string;
-  heroImgWidth: number;
-  heroImgHeight: number;
+  heroImg: ContentImage;
 };
 
 // type ImgAsset = {
@@ -108,57 +117,44 @@ type HomePageProps = {
 export default function Home({
   heroHeading,
   heroSubHeading,
-  heroImgUrl,
-  heroImgWidth,
-  heroImgHeight,
+  heroImg,
 }: HomePageProps) {
-  // console.log("HEADING: ", heroHeading);
-  // console.log("SUBHEADING: ", heroSubHeading);
-  // console.log("IMG URL: ", heroImgUrl);
   return (
     <main className="max-w-screen-2xl mx-auto">
       <section className="flex flex-col items-center">
-        {/* <h1 className="text-5xl font-bold mt-20 mb-3">{heroHeading}</h1> */}
-        {/* <h2 className="text-xl">{heroSubHeading}</h2> */}
+        <h1 className="text-5xl font-bold mt-20 mb-3">{heroHeading}</h1>
+        <h2 className="text-xl">{heroSubHeading}</h2>
         <Image
-          // src={`https:${heroImgUrl}`}
-          src=""
-          alt="Test"
-          width={1150}
-          height={468}
+          src={`https:${heroImg.src}`}
+          alt={heroImg.alt}
+          width={heroImg.width}
+          height={heroImg.height}
         />
       </section>
     </main>
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await client.getEntries<{
-    fields: HomePageFields;
-    contentTypeId: "page";
-  }>({
-    content_type: "page",
-    include: 2,
+export const getStaticProps = async () => {
+  // const res = await client.getEntries<TypePageSectionSkeleton>({
+  //   content_type: "pageSection",
+  //   include: 10,
+  // });
+
+  const page = await fetchPageSection({
+    pagesectionName: "Home/Hero Section",
+    preview: false,
   });
 
-  // @ts-ignore
-  const test = res.items[0].fields;
-
-  console.log("TEST: ", test);
-
-  const { primaryHeading } = res.items[0].fields;
-  // const { subHeading } = res.items[0].fields;
-  // // @ts-ignore
-  // const { url, details } = res.items[0].fields.heroImage.fields.file;
-  // const { width, height } = details.image;
+  if (!page) {
+    return;
+  }
 
   return {
     props: {
-      // heroHeading: heading,
-      // heroSubHeading: subHeading,
-      // heroImgUrl: url,
-      // heroImgWidth: width,
-      // heroImgHeight: height,
+      heroHeading: page.primaryHeading,
+      heroSubHeading: page.primarySubheading,
+      heroImg: page.primaryImage,
     },
   };
 };
