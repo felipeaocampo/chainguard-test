@@ -1,0 +1,2844 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "pageSection",
+        "type": "ContentType",
+        "createdAt": "2023-12-14T03:20:31.773Z",
+        "updatedAt": "2023-12-14T11:04:34.872Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 63,
+        "publishedAt": "2023-12-14T11:04:34.872Z",
+        "firstPublishedAt": "2023-12-14T03:20:32.166Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 32,
+        "version": 64,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "pagesectionName",
+      "name": "Page Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "pagesectionName",
+          "name": "Page/Section Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primaryHeading",
+          "name": "Primary Heading",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primarySubheading",
+          "name": "Primary Subheading",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primaryParagraphText",
+          "name": "Primary Paragraph text",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primaryCta",
+          "name": "Primary CTA",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "secondaryCta",
+          "name": "Secondary CTA",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "primaryImage",
+          "name": "Primary Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "otherImages",
+          "name": "Other Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "secondaryTextContent",
+          "name": "Secondary Text Content",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "blogs",
+          "name": "Blogs",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "labs",
+          "name": "Labs",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "newsroomArticles",
+          "name": "Newsroom Articles",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "cards",
+          "name": "Cards",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "form",
+          "name": "Form",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "slider",
+          "name": "Slider",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "customerLogosBar",
+          "name": "Customer Logos Bar",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "staffHeadshots",
+          "name": "Staff Headshots",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "impressiveNumbersBar",
+          "name": "Impressive Numbers Bar",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "tabPanel",
+          "name": "Tab Panel",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "accordion",
+          "name": "Accordion",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "infiniteMarquee",
+          "name": "Infinite Marquee",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "butterBar",
+          "name": "Butter Bar",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "customerTestimonial",
+        "type": "ContentType",
+        "createdAt": "2023-12-14T03:29:34.897Z",
+        "updatedAt": "2023-12-14T03:45:51.748Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-12-14T03:45:51.748Z",
+        "firstPublishedAt": "2023-12-14T03:29:35.209Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "customerTestimonial",
+      "name": "Customer Testimonial",
+      "description": "",
+      "fields": [
+        {
+          "id": "customerTestimonial",
+          "name": "Customer Testimonial",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "customerName",
+          "name": "Customer Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "customerPosition",
+          "name": "Customer Position",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "testimonialText",
+          "name": "Testimonial Text",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "testimonialLogo",
+          "name": "Testimonial Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2023-12-14T09:20:47.174Z",
+        "updatedAt": "2023-12-14T11:52:18.088Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-12-14T11:52:18.088Z",
+        "firstPublishedAt": "2023-12-14T09:20:47.557Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "pageName",
+      "name": "Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "pageName",
+          "name": "Page Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "section1",
+          "name": "Section 1",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "section2",
+          "name": "Section 2",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "section3",
+          "name": "Section 3",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "section4",
+          "name": "Section 4",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "section5",
+          "name": "Section 5",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "section6",
+          "name": "Section 6",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "section7",
+          "name": "Section 7",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "section8",
+          "name": "Section 8",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "customerLogosBar",
+        "type": "ContentType",
+        "createdAt": "2023-12-14T09:25:36.639Z",
+        "updatedAt": "2023-12-14T09:25:36.996Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-12-14T09:25:36.996Z",
+        "firstPublishedAt": "2023-12-14T09:25:36.996Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "entryName",
+      "name": "Customer Logos Bar",
+      "description": "",
+      "fields": [
+        {
+          "id": "entryName",
+          "name": "Entry Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logoImages",
+          "name": "Logo Images",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "customerTestimonials",
+        "type": "ContentType",
+        "createdAt": "2023-12-14T09:27:13.792Z",
+        "updatedAt": "2023-12-14T09:27:14.168Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-12-14T09:27:14.168Z",
+        "firstPublishedAt": "2023-12-14T09:27:14.168Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "entryName",
+      "name": "Customer Testimonials",
+      "description": "",
+      "fields": [
+        {
+          "id": "entryName",
+          "name": "Entry Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "testimonials",
+          "name": "Testimonials",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "blogPage",
+        "type": "ContentType",
+        "createdAt": "2023-12-14T10:37:00.805Z",
+        "updatedAt": "2023-12-14T10:37:01.208Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-12-14T10:37:01.208Z",
+        "firstPublishedAt": "2023-12-14T10:37:01.208Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "blogTitle",
+      "name": "Blog Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "blogTitle",
+          "name": "Blog Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blogAuthor",
+          "name": "Blog Author",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "datePublished",
+          "name": "Date Published",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blogTag",
+          "name": "Blog Tag",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blogContent",
+          "name": "Blog Content",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blogs",
+          "name": "Blogs",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "butterBar",
+        "type": "ContentType",
+        "createdAt": "2023-12-14T11:31:41.454Z",
+        "updatedAt": "2023-12-14T11:31:41.826Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-12-14T11:31:41.826Z",
+        "firstPublishedAt": "2023-12-14T11:31:41.826Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "pagesectionButterBar",
+      "name": "Butter Bar",
+      "description": "",
+      "fields": [
+        {
+          "id": "pagesectionButterBar",
+          "name": "Page/Section Butter Bar",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "butterBarText",
+          "name": "Butter Bar Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "butterBarLink",
+          "name": "Butter Bar Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 64,
+        "createdAt": "2023-12-14T03:20:32.347Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-12-14T11:04:35.824Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "pageSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "pagesectionName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryHeading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primarySubheading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryParagraphText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryCta",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "secondaryCta",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "otherImages",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "secondaryTextContent",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blogs",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "labs",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "newsroomArticles",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cards",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "form",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slider",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "customerLogosBar",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "staffHeadshots",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "impressiveNumbersBar",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "tabPanel",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "accordion",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "infiniteMarquee",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "butterBar",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 8,
+        "createdAt": "2023-12-14T03:29:35.411Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-12-14T03:45:52.413Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "customerTestimonial",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "customerTestimonial",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "customerName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "customerPosition",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "testimonialText",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "testimonialLogo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2023-12-14T09:20:47.722Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-12-14T11:52:18.711Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "pageName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section1",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section2",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section3",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section4",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section5",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section6",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section7",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "section8",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-12-14T09:25:37.135Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-12-14T09:25:37.708Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "customerLogosBar",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "entryName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "logoImages",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-12-14T09:27:14.297Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-12-14T09:27:15.067Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "customerTestimonials",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "entryName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "testimonials",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-12-14T10:37:01.386Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-12-14T10:37:01.977Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "blogPage",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "blogTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blogAuthor",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "datePublished",
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blogTag",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blogContent",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blogs",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-12-14T11:31:42.005Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-12-14T11:31:42.540Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "butterBar",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "pagesectionButterBar",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "butterBarText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "butterBarLink",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "7wWqkpqFJyMfV3yWKLwul4",
+        "type": "Entry",
+        "createdAt": "2023-12-14T03:40:35.800Z",
+        "updatedAt": "2023-12-14T11:36:08.605Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 32,
+        "publishedAt": "2023-12-14T11:36:08.605Z",
+        "firstPublishedAt": "2023-12-14T03:41:53.993Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 33,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "pageSection"
+          }
+        }
+      },
+      "fields": {
+        "pagesectionName": {
+          "en-US": "Home/Hero Section"
+        },
+        "primaryHeading": {
+          "en-US": "Your safe source for open source"
+        },
+        "primarySubheading": {
+          "en-US": "Build it right. Build it safe. Build it fast."
+        },
+        "primaryCta": {
+          "en-US": "Get Started"
+        },
+        "primaryImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "VXCZ8slFPbAOYs9w1LcIV"
+            }
+          }
+        },
+        "butterBar": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3z2DRiSYMhnc0LXuHx2kre"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "3ZGpdo3YW5QeYp7vYvgdgW",
+        "type": "Entry",
+        "createdAt": "2023-12-14T03:42:52.092Z",
+        "updatedAt": "2023-12-14T03:50:14.316Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-12-14T03:50:14.316Z",
+        "firstPublishedAt": "2023-12-14T03:50:14.316Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "customerTestimonial"
+          }
+        }
+      },
+      "fields": {
+        "customerTestimonial": {
+          "en-US": "Snowflake Testimonial"
+        },
+        "customerName": {
+          "en-US": "Brandon Sterne"
+        },
+        "customerPosition": {
+          "en-US": "Senior Manager Product Security"
+        },
+        "testimonialText": {
+          "en-US": "Snowflake is on a mission to help organizations scale their cloud businesses securely. Adoption of Chainguard Images has transformed the way our team builds securely with open source software across the organization and has helped to streamline and strengthen our FedRAMP certifications by providing fast open source vulnerability remediation"
+        },
+        "testimonialLogo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6J8lYVAqXp6rLdzJAmYram"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "2I7kuxJ0z2AA9kOswXxPkw",
+        "type": "Entry",
+        "createdAt": "2023-12-14T11:07:40.254Z",
+        "updatedAt": "2023-12-14T11:09:12.522Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2023-12-14T11:09:12.522Z",
+        "firstPublishedAt": "2023-12-14T11:08:22.961Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "customerLogosBar"
+          }
+        }
+      },
+      "fields": {
+        "entryName": {
+          "en-US": "Home/Case Studies Customer Logos Bar"
+        },
+        "logoImages": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7fk4EI1EbsOm2umAaFd7fH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6J8lYVAqXp6rLdzJAmYram"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6qvCOXGa8rwGkX2Akxw49O"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4BVY7cuKESpMhc8TSlyWCp"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "22R2pVpHpGDqooew2Nrb8i"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7HwyJoTKCwtIt31OziMgpV"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5cbF2SuLnoFjU1Zky6013G"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "7deYwD3V0DiNoJt3Z4duYe",
+        "type": "Entry",
+        "createdAt": "2023-12-14T11:10:43.809Z",
+        "updatedAt": "2023-12-14T11:52:35.380Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2023-12-14T11:52:35.380Z",
+        "firstPublishedAt": "2023-12-14T11:12:24.097Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "pageName": {
+          "en-US": "Home Page"
+        },
+        "slug": {
+          "en-US": "/"
+        },
+        "section1": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "7wWqkpqFJyMfV3yWKLwul4"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "3z2DRiSYMhnc0LXuHx2kre",
+        "type": "Entry",
+        "createdAt": "2023-12-14T11:31:57.560Z",
+        "updatedAt": "2023-12-14T11:32:32.694Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-12-14T11:32:32.694Z",
+        "firstPublishedAt": "2023-12-14T11:32:32.694Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "butterBar"
+          }
+        }
+      },
+      "fields": {
+        "pagesectionButterBar": {
+          "en-US": "Home/Hero Butter Bar"
+        },
+        "butterBarText": {
+          "en-US": "New Chainguard Images Directory"
+        },
+        "butterBarLink": {
+          "en-US": "https://www.chainguard.dev/unchained/new-year-new-image-introducing-the-chainguard-images-directory"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "VXCZ8slFPbAOYs9w1LcIV",
+        "type": "Asset",
+        "createdAt": "2023-12-12T09:26:47.755Z",
+        "updatedAt": "2023-12-12T09:27:35.201Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-12-12T09:27:35.201Z",
+        "firstPublishedAt": "2023-12-12T09:27:35.201Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Home page hero image"
+        },
+        "description": {
+          "en-US": "Cool cyber security statistics"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/VXCZ8slFPbAOYs9w1LcIV/64eafa28f3250332a59c1184ffd6ce4f/hero.png",
+            "details": {
+              "size": 34344,
+              "image": {
+                "width": 2304,
+                "height": 938
+              }
+            },
+            "fileName": "hero.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "u82qdxJ5GMEXb2ez4xtRd",
+        "type": "Asset",
+        "createdAt": "2023-12-13T08:39:38.216Z",
+        "updatedAt": "2023-12-13T08:40:44.779Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-12-13T08:40:44.779Z",
+        "firstPublishedAt": "2023-12-13T08:40:44.779Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Nav Logo"
+        },
+        "description": {
+          "en-US": "Chainguard Logo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/u82qdxJ5GMEXb2ez4xtRd/b277d425e7eae1b15d0076882d967108/logo.svg",
+            "details": {
+              "size": 15397,
+              "image": {
+                "width": 147,
+                "height": 28
+              }
+            },
+            "fileName": "logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "6J8lYVAqXp6rLdzJAmYram",
+        "type": "Asset",
+        "createdAt": "2023-12-14T03:49:29.123Z",
+        "updatedAt": "2023-12-14T03:49:59.374Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-12-14T03:49:59.374Z",
+        "firstPublishedAt": "2023-12-14T03:49:59.374Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Snowflake Logo"
+        },
+        "description": {
+          "en-US": "Logo of Chainguard customer Snowflake"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/6J8lYVAqXp6rLdzJAmYram/56e9ad7f3c83062557fad4f21be832b3/snowflake-logo.svg",
+            "details": {
+              "size": 15074,
+              "image": {
+                "width": 120,
+                "height": 64
+              }
+            },
+            "fileName": "snowflake-logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "7fk4EI1EbsOm2umAaFd7fH",
+        "type": "Asset",
+        "createdAt": "2023-12-14T03:53:13.973Z",
+        "updatedAt": "2023-12-14T03:54:05.515Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2023-12-14T03:54:05.515Z",
+        "firstPublishedAt": "2023-12-14T03:54:05.515Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Precisely Logo"
+        },
+        "description": {
+          "en-US": "Logo of Chainguard customer Precisely"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/7fk4EI1EbsOm2umAaFd7fH/f6ebcb928e07a06e407d45ef97d23034/precisely-logo.svg",
+            "details": {
+              "size": 3524,
+              "image": {
+                "width": 120,
+                "height": 64
+              }
+            },
+            "fileName": "precisely-logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "6qvCOXGa8rwGkX2Akxw49O",
+        "type": "Asset",
+        "createdAt": "2023-12-14T03:54:16.867Z",
+        "updatedAt": "2023-12-14T03:54:50.735Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-12-14T03:54:50.735Z",
+        "firstPublishedAt": "2023-12-14T03:54:50.735Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Sourcegraph Logo"
+        },
+        "description": {
+          "en-US": "Logo of Chainguard customer Sourcegraph"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/6qvCOXGa8rwGkX2Akxw49O/99bc724915a62f949f4decc167c65f2a/sourcegraph-logo.svg",
+            "details": {
+              "size": 11839,
+              "image": {
+                "width": 120,
+                "height": 64
+              }
+            },
+            "fileName": "sourcegraph-logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "4BVY7cuKESpMhc8TSlyWCp",
+        "type": "Asset",
+        "createdAt": "2023-12-14T03:55:06.364Z",
+        "updatedAt": "2023-12-14T03:55:39.288Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-12-14T03:55:39.288Z",
+        "firstPublishedAt": "2023-12-14T03:55:39.288Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "GitGuardian Logo"
+        },
+        "description": {
+          "en-US": "Logo of Chainguard customer GitGuardian"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/4BVY7cuKESpMhc8TSlyWCp/32b4f0246eec4bf88b7d0c4201cb43bc/gitguardian-logo.svg",
+            "details": {
+              "size": 11083,
+              "image": {
+                "width": 120,
+                "height": 64
+              }
+            },
+            "fileName": "gitguardian-logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "5cbF2SuLnoFjU1Zky6013G",
+        "type": "Asset",
+        "createdAt": "2023-12-14T03:55:52.017Z",
+        "updatedAt": "2023-12-14T03:56:15.432Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-12-14T03:56:15.432Z",
+        "firstPublishedAt": "2023-12-14T03:56:15.432Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "GitLab Logo"
+        },
+        "description": {
+          "en-US": "Logo of Chainguard customer GitLab"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/5cbF2SuLnoFjU1Zky6013G/09faae96d3978475d946aec50e8593c8/gitlab-logo.svg",
+            "details": {
+              "size": 4528,
+              "image": {
+                "width": 120,
+                "height": 64
+              }
+            },
+            "fileName": "gitlab-logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "7HwyJoTKCwtIt31OziMgpV",
+        "type": "Asset",
+        "createdAt": "2023-12-14T03:56:20.744Z",
+        "updatedAt": "2023-12-14T03:56:42.533Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-12-14T03:56:42.533Z",
+        "firstPublishedAt": "2023-12-14T03:56:42.533Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Canva Logo"
+        },
+        "description": {
+          "en-US": "Logo of Chainguard customer Canva"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/7HwyJoTKCwtIt31OziMgpV/9a78e757ab88215a92477d961eaa447f/canva-logo.svg",
+            "details": {
+              "size": 4065,
+              "image": {
+                "width": 96,
+                "height": 64
+              }
+            },
+            "fileName": "canva-logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "22R2pVpHpGDqooew2Nrb8i",
+        "type": "Asset",
+        "createdAt": "2023-12-14T03:56:51.200Z",
+        "updatedAt": "2023-12-14T03:57:14.237Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-12-14T03:57:14.237Z",
+        "firstPublishedAt": "2023-12-14T03:57:14.237Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Elastic Logo"
+        },
+        "description": {
+          "en-US": "Logo of Chainguard customer Elastic"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/22R2pVpHpGDqooew2Nrb8i/f6152f24a96634b78b1301e82a60582e/elastic-logo.svg",
+            "details": {
+              "size": 6121,
+              "image": {
+                "width": 120,
+                "height": 64
+              }
+            },
+            "fileName": "elastic-logo.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "6eO2UduvzvCpz0Gjsf3rPh",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "0091e8af-64e3-4649-a0fb-bdf4172d5cd8"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "createdAt": "2023-12-12T09:07:29Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedAt": "2023-12-12T09:07:29Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "6f82FpFrAtIMfNfYdWfIOr",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "createdAt": "2023-12-12T09:07:30Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedAt": "2023-12-12T09:07:30Z"
+      }
+    }
+  ]
+}
