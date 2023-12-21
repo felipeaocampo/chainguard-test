@@ -1,9 +1,13 @@
-import { TypePageSectionSkeleton } from "../../types/contentful";
-import { Entry } from "contentful";
+import {
+  TypeButterBar,
+  TypePageSection,
+  TypePageSectionSkeleton,
+} from "@/../types/contentful";
 import { client } from "./client";
 import { ContentImage, parseContentfulContentImage } from "./contentImage";
+import { ButterBar } from "@/../types/SectionTypes";
 
-type PageSectionEntry = Entry<TypePageSectionSkeleton, undefined, string>;
+// https://maxschmitt.me/posts/nextjs-contentful-typescript HELPFUL ARTICLE
 
 export interface PageSection {
   pagesectionName: string;
@@ -11,14 +15,29 @@ export interface PageSection {
   primarySubheading: string;
   primaryCta: string;
   primaryImage: ContentImage | null;
+  butterBar: ButterBar | null;
+}
+
+export function parseButterBarEntry(
+  param: TypeButterBar<undefined, string>
+): ButterBar {
+  return {
+    pagesectionButterBar: param.fields.pagesectionButterBar || "",
+    butterText: param.fields.butterBarText || "",
+    butterLink: param.fields.butterBarLink || "",
+  };
 }
 
 export function parseContentfulPageSection(
-  pageSectionEntry?: PageSectionEntry
+  pageSectionEntry?: TypePageSection<undefined, string>
 ): PageSection | null {
   if (!pageSectionEntry) {
     return null;
   }
+  const butterBarEntry = pageSectionEntry.fields.butterBar as TypeButterBar<
+    undefined,
+    string
+  >;
 
   return {
     pagesectionName: pageSectionEntry.fields.pagesectionName || "",
@@ -28,6 +47,7 @@ export function parseContentfulPageSection(
     primaryImage: parseContentfulContentImage(
       pageSectionEntry.fields.primaryImage
     ),
+    butterBar: parseButterBarEntry(butterBarEntry),
   };
 }
 
