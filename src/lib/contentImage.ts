@@ -1,5 +1,7 @@
 import { Asset, AssetLink } from "contentful";
 
+//https://maxschmitt.me/posts/nextjs-contentful-typescript HELPFUL ARTICLE
+
 // Our simplified version of an image asset.
 // We don't need all the data that Contentful gives us.
 export interface ContentImage {
