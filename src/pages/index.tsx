@@ -1,10 +1,6 @@
 import { client } from "@/lib/client";
 import Image from "next/image";
-import {
-  TypePageSection,
-  TypePageSkeleton,
-  TypeButterBar,
-} from "@/../types/contentful";
+import { TypePageSection, TypePageSkeleton } from "@/../types/contentful";
 import { parseContentfulPageSection } from "@/lib/pageSection";
 import { ContentImage } from "@/lib/contentImage";
 import Link from "next/link";
@@ -57,8 +53,6 @@ export const getStaticProps = async () => {
   const section1Typed = assignSectionTypes<TypePageSection<undefined, string>>(
     page.items[0].fields.section1
   );
-
-  console.log("TEST: ", page.items[0]);
 
   //2ND: GET CONTENT FOR EACH PART OF SECTION SECTION
   const section1Data = parseContentfulPageSection(section1Typed);

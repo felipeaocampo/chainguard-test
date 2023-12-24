@@ -1,14 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/../public/images/cg-logo.svg";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function NavBar() {
   const [hovered, setHovered] = useState(false);
+  const [showing, setShowing] = useState(false);
 
-  const handleDropdownHoverToggle = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      setShowing((prev) => !prev);
+    }, 100);
+
+    // return () => {
+    //   console.log("clean up func run");
+    // };
+  }, [hovered]);
+
+  const handleDropdownHoverToggle = useCallback(() => {
     setHovered((prev) => !prev);
-  };
+  }, []);
 
   return (
     <header className="flex justify-between max-w-screen-xl mx-auto py-5">
@@ -24,21 +35,31 @@ export default function NavBar() {
             onMouseEnter={handleDropdownHoverToggle}
             onMouseLeave={handleDropdownHoverToggle}
           >
-            <Link href="/chainguard-images">Products</Link>
+            <div>Products</div>
             <div
-              className={`absolute transition-all duration-300 ${
-                hovered ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute transition-all duration-300 opacity-0 ${
+                hovered ? "block" : "hidden"
+              } ${showing ? "opacity-100" : ""}`}
             >
               <div className="w-56 h-7"></div>
-              <div className={`p-4 bg-red-300 leading-none w-56 rounded-lg`}>
-                <div className="p-2 hover:bg-green-300 rounded-lg">
-                  Chainguard Images
-                </div>
-                <div className="p-2 hover:bg-green-300 rounded-lg">
-                  Chainguard Services
-                </div>
-              </div>
+              <ul className={`p-4 bg-red-300 leading-none w-56 rounded-lg`}>
+                <li className="">
+                  <Link
+                    href="/chainguard-images"
+                    className="block p-2 hover:bg-green-300 rounded-lg"
+                  >
+                    Chainguard Images
+                  </Link>
+                </li>
+                <li className="">
+                  <Link
+                    href="/"
+                    className="block p-2 hover:bg-green-300 rounded-lg"
+                  >
+                    Chainguard Services
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
           <Link href="/open-source">Open Source</Link>
