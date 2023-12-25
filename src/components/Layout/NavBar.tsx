@@ -11,10 +11,6 @@ export default function NavBar() {
     setTimeout(() => {
       setShowing((prev) => !prev);
     }, 100);
-
-    // return () => {
-    //   console.log("clean up func run");
-    // };
   }, [hovered]);
 
   const handleDropdownHoverToggle = useCallback(() => {
