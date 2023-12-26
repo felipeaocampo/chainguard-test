@@ -7,14 +7,23 @@ export default function NavBar() {
   const [hovered, setHovered] = useState(false);
   const [showing, setShowing] = useState(false);
 
-  useEffect(() => {
+  const handleDropdownHoverEnter = useCallback(() => {
+    setHovered(true);
     setTimeout(() => {
-      setShowing((prev) => !prev);
+      setShowing(true);
     }, 100);
-  }, [hovered]);
+  }, []);
 
-  const handleDropdownHoverToggle = useCallback(() => {
-    setHovered((prev) => !prev);
+  const handleDropdownHoverExit = useCallback(() => {
+    setShowing(false);
+    setTimeout(() => {
+      setHovered(false);
+    }, 100);
+  }, []);
+
+  const handleLinkClick = useCallback(() => {
+    setHovered(false);
+    setShowing(false);
   }, []);
 
   return (
@@ -28,8 +37,8 @@ export default function NavBar() {
         <ul className="flex gap-5 items-center">
           <div
             className="relative"
-            onMouseEnter={handleDropdownHoverToggle}
-            onMouseLeave={handleDropdownHoverToggle}
+            onMouseEnter={handleDropdownHoverEnter}
+            onMouseLeave={handleDropdownHoverExit}
           >
             <div>Products</div>
             <div
@@ -39,7 +48,7 @@ export default function NavBar() {
             >
               <div className="w-56 h-7"></div>
               <ul className={`p-4 bg-red-300 leading-none w-56 rounded-lg`}>
-                <li className="">
+                <li className="" onClick={handleLinkClick}>
                   <Link
                     href="/chainguard-images"
                     className="block p-2 hover:bg-green-300 rounded-lg"
@@ -47,7 +56,7 @@ export default function NavBar() {
                     Chainguard Images
                   </Link>
                 </li>
-                <li className="">
+                <li className="" onClick={handleLinkClick}>
                   <Link
                     href="/"
                     className="block p-2 hover:bg-green-300 rounded-lg"

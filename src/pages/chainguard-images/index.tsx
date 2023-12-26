@@ -9,7 +9,7 @@ export const getStaticProps: GetStaticProps = async () => {
   // console.log("NAVBAR: ", res);
   // console.log("client token1: ", client.space);
 
-  console.log("hey from the images page!");
+  // console.log("hey from the images page!");
 
   return {
     props: {},

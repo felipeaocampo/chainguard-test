@@ -44,33 +44,48 @@ export default function Home({
 }
 
 export const getStaticProps = async () => {
-  const page = await client.getEntries<TypePageSkeleton>({
-    content_type: "page",
-    include: 10,
-  });
+  // const page = await client.getEntries<TypePageSkeleton>({
+  //   content_type: "page",
+  //   include: 10,
+  // });
 
   // 1ST: ASSIGN TYPES TO EACH SECTION OF PAGE
-  const section1Typed = assignSectionTypes<TypePageSection<undefined, string>>(
-    page.items[0].fields.section1
-  );
+  // const section1Typed = assignSectionTypes<TypePageSection<undefined, string>>(
+  //   page.items[0].fields.section1
+  // );
 
   //2ND: GET CONTENT FOR EACH PART OF SECTION SECTION
-  const section1Data = parseContentfulPageSection(section1Typed);
+  // const section1Data = parseContentfulPageSection(section1Typed);
 
-  if (!section1Data) {
-    return;
-  }
+  // if (!section1Data) {
+  //   return;
+  // }
 
   // console.log("Section: ", section1Data);
 
   //3RD: SET CONTENT INTO PROPS
   return {
     props: {
-      heroHeading: section1Data.primaryHeading,
-      heroSubHeading: section1Data.primarySubheading,
-      heroImg: section1Data.primaryImage,
-      heroCta: section1Data.primaryCta,
-      butterBar: section1Data.butterBar,
+      heroHeading: "",
+      heroSubHeading: "",
+      heroImg: {
+        src: "/images/cg-logo.svg",
+        alt: "",
+        width: 100,
+        height: 100,
+      },
+      heroCta: "",
+      butterBar: {
+        butterText: "",
+        butterLink: "",
+      },
     },
+    // props: {
+    //   heroHeading: section1Data.primaryHeading,
+    //   heroSubHeading: section1Data.primarySubheading,
+    //   heroImg: section1Data.primaryImage,
+    //   heroCta: section1Data.primaryCta,
+    //   butterBar: section1Data.butterBar,
+    // },
   };
 };
