@@ -27,8 +27,8 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header className="flex justify-between max-w-screen-xl mx-auto py-5">
-      <div className="logo-wrapper">
+    <header className="flex justify-between max-w-screen-xl mx-auto py-5 absolute w-full left-[50%] translate-x-[-50%]">
+      <div className="logo-wrapper flex items-center">
         <Link href="/">
           <Image src={Logo} alt="Chainguard Logo" width={146} height={28} />
         </Link>
@@ -40,7 +40,7 @@ export default function NavBar() {
             onMouseEnter={handleDropdownHoverEnter}
             onMouseLeave={handleDropdownHoverExit}
           >
-            <div>Products</div>
+            <div className="cursor-pointer">Products</div>
             <div
               className={`absolute transition-all duration-300 opacity-0 ${
                 hovered ? "block" : "hidden"

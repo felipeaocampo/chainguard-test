@@ -1,9 +1,4 @@
-import {
-  TypeGeneralContentCard,
-  TypePageSection,
-  TypePageSectionSkeleton,
-} from "@/../types/contentful";
-import { client } from "./client";
+import { TypeGeneralContentCard, TypePageSection } from "@/../types/contentful";
 import { ContentImage, parseContentfulContentImage } from "./contentImage";
 import { ButterBar } from "@/../types/SectionTypes";
 import { AssignType } from "@/pages";
@@ -38,7 +33,7 @@ export interface PageSection {
 //   };
 // }
 
-export function parseContentfulPageSection(
+export function parseContentfulHomeSection1(
   pageSectionEntry?: TypePageSection<undefined, string>
 ): PageSection | null {
   if (!pageSectionEntry) {
@@ -46,7 +41,6 @@ export function parseContentfulPageSection(
   }
 
   //STEP 1: SEPARATE SECTION INTO PARTS
-
   if (!pageSectionEntry.fields.pageSectionParts) {
     return null;
   }
