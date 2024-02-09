@@ -29,12 +29,15 @@ export default function HomeSection1({
   );
 
   return (
-    <section className="flex flex-col items-center mb-[96px] bg-hero-cg-gradient pt-[180px]">
+    <section
+      className="flex flex-col items-center mb-[96px] pt-[180px] max-w-[1152px] mx-auto"
+      style={{ width: "min(90%, 1152px)" }}
+    >
       <aside className="mb-[24px] text-[14px] py-[8px] px-[15px] border border-solid rounded-[100px]">
         <p className="flex gap-[6px]">
           {nonLinkFloatingText}
           <Link
-            href={section1Props.floatingHeaderLink}
+            href={`/unchained${section1Props.floatingHeaderLink}`}
             className="text-cg-text-blue hover:text-cg-hover-btn-bg-blue"
           >
             {linkedFloatingText}

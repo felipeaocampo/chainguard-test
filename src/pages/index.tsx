@@ -41,8 +41,10 @@ export default function Home({
   //
 
   return (
-    <main className="font-sans overflow-hidden border-b solid ">
-      <HomeSection1 section1Props={section1Props} />
+    <main className="font-sans overflow-hidden border-b solid w-full">
+      <div className="w-full bg-hero-cg-gradient">
+        <HomeSection1 section1Props={section1Props} />
+      </div>
       <HomeSection2 section2Props={section2Props} />
       <HomeSection3 section3Props={section3Props} />
       <HomeSection4 section4Props={section4Props} />

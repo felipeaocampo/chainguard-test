@@ -26,11 +26,11 @@ export default function UnchainedSection1({
     <section className=" mb-[96px] bg-hero-cg-gradient pt-[180px]">
       <div className="main-text max-w-[1152px] mx-auto flex justify-between w-full items-end mb-[48px]">
         <div className="text-left">
-          <h5>Floating Header text</h5>
-          <h1>Welcome to the Unchained page</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h5>{unchainedSection1Props.heading}</h5>
+          <h1>{unchainedSection1Props.subheading}</h1>
+          <p>{unchainedSection1Props.description}</p>
         </div>
-        <button>Subscribe to Newsletter</button>
+        <button>{unchainedSection1Props.ctaText}</button>
       </div>
       <ul className="featured-cards flex gap-5 justify-center">
         {unchainedSection1Props.featuredBlogs.map((blogCard: BlogCard) => {

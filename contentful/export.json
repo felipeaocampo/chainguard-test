@@ -777,7 +777,7 @@
         "id": "pageSection",
         "type": "ContentType",
         "createdAt": "2023-12-26T05:43:11.045Z",
-        "updatedAt": "2024-02-02T07:06:32.644Z",
+        "updatedAt": "2024-02-06T18:38:41.004Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -785,8 +785,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-02-02T07:06:32.644Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-02-06T18:38:41.004Z",
         "firstPublishedAt": "2023-12-26T05:43:11.296Z",
         "createdBy": {
           "sys": {
@@ -802,8 +802,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -844,7 +844,8 @@
                 "linkContentType": [
                   "customersSection",
                   "generalContentCard",
-                  "blogs"
+                  "blogs",
+                  "searchBar"
                 ]
               }
             ],
@@ -1130,6 +1131,108 @@
             "validations": [
             ],
             "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "searchBar",
+        "type": "ContentType",
+        "createdAt": "2024-02-06T18:38:01.991Z",
+        "updatedAt": "2024-02-06T18:40:53.915Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2024-02-06T18:40:53.915Z",
+        "firstPublishedAt": "2024-02-06T18:38:02.437Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "searchBarName",
+      "name": "Search Bar",
+      "description": "",
+      "fields": [
+        {
+          "id": "searchBarName",
+          "name": "Search Bar Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "placeholder",
+          "name": "Placeholder",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "optionsLabel",
+          "name": "Options Label",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "options",
+          "name": "Options",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
           }
         }
       ]
@@ -1585,7 +1688,7 @@
             "linkType": "Space"
           }
         },
-        "version": 6,
+        "version": 8,
         "createdAt": "2023-12-26T05:43:11.390Z",
         "createdBy": {
           "sys": {
@@ -1594,7 +1697,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2024-02-02T07:06:33.261Z",
+        "updatedAt": "2024-02-06T18:38:41.711Z",
         "updatedBy": {
           "sys": {
             "id": "4WyQYHyKILu3LMGKmCYuG6",
@@ -1776,6 +1879,72 @@
         {
           "fieldId": "featuredBlogs",
           "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2024-02-06T18:38:02.800Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-02-06T18:40:54.868Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "searchBar",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "searchBarName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "placeholder",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "optionsLabel",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "options",
+          "widgetId": "tagEditor",
           "widgetNamespace": "builtin"
         }
       ]
@@ -4298,7 +4467,7 @@
         "id": "3JO2kTN0Dpl50jZWnLYs5c",
         "type": "Entry",
         "createdAt": "2024-02-01T07:49:36.431Z",
-        "updatedAt": "2024-02-03T07:13:32.200Z",
+        "updatedAt": "2024-02-04T20:54:43.137Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4306,8 +4475,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 80,
-        "publishedAt": "2024-02-03T07:13:32.200Z",
+        "publishedVersion": 137,
+        "publishedAt": "2024-02-04T20:54:43.137Z",
         "firstPublishedAt": "2024-02-01T08:16:39.042Z",
         "createdBy": {
           "sys": {
@@ -4323,8 +4492,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 4,
-        "version": 81,
+        "publishedCounter": 16,
+        "version": 138,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -4376,380 +4545,382 @@
         },
         "blogContent": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Over the past year, ",
                     "marks": [
                     ],
-                    "value": "Over the past year, ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Chainguard",
                     "marks": [
                       {
                         "type": "bold"
                       }
                     ],
-                    "value": "Chainguard",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": " has ",
                     "marks": [
                     ],
-                    "value": " has ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "expanded",
                     "marks": [
                       {
                         "type": "italic"
                       }
                     ],
-                    "value": "expanded",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": " its Images inventory, reaching over one million image builds, to offer developers the freedom to build secure software with the tools and applications they know and love. ",
                     "marks": [
                     ],
-                    "value": " its Images inventory, reaching over one million image builds, to offer developers the freedom to build secure software with the tools and applications they know and love. ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "With Chainguard Images, we have designed a first-of-its-kind approach in the market to address container image security and secure open source software development, which are foundational components of securing the software supply chain. The road to product-market-fit is not defined, it is forged. And we have learned a lot refining our approach to building secure images as both a reliable and scalable enterprise product and open source community solution. Our ",
                     "marks": [
                     ],
-                    "value": "With Chainguard Images, we have designed a first-of-its-kind approach in the market to address container image security and secure open source software development, which are foundational components of securing the software supply chain. The road to product-market-fit is not defined, it is forged. And we have learned a lot refining our approach to building secure images as both a reliable and scalable enterprise product and open source community solution. Our ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
+                    "nodeType": "hyperlink",
                     "data": {
                       "uri": "https://www.chainguard.dev/unchained/series-b-funding"
                     },
                     "content": [
                       {
-                        "data": {
-                        },
+                        "nodeType": "text",
+                        "value": "Series B fundraising",
                         "marks": [
                         ],
-                        "value": "Series B fundraising",
-                        "nodeType": "text"
+                        "data": {
+                        }
                       }
-                    ],
-                    "nodeType": "hyperlink"
+                    ]
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": " round further reinforces that we are on the right path, addressing the right open source and software supply chain security problems development and security teams face today. ",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "Chainguard Images – which started as an experiment – has now helped organizations from the private and public sectors see a 97.6% reduction in CVEs and eliminate entire classes of vulnerabilities within their software supply chain. Chainguard Images are trusted by Snowflake, Hewlett Packard Enterprise, Sourcegraph, GitGuardian, Replicated, the United States Air Force Platform One Iron Bank and more. ",
-                    "nodeType": "text"
-                  }
-                ],
-                "nodeType": "paragraph"
-              },
-              {
-                "data": {
-                },
-                "content": [
-                  {
-                    "data": {
-                    },
                     "marks": [
                     ],
-                    "value": "Off the shelf, Chainguard Images offer: ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "text",
+                    "value": "Off the shelf, Chainguard Images offer: ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "unordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "a large ",
                             "marks": [
                             ],
-                            "value": "a large ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://console.enforce.dev/auth/login"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "inventory",
                                 "marks": [
                                 ],
-                                "value": "inventory",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " of popular build and development tools, applications, middleware, and language runtimes, ",
                             "marks": [
                             ],
-                            "value": " of popular build and development tools, applications, middleware, and language runtimes, ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "a highly performant, more secure ",
                             "marks": [
                             ],
-                            "value": "a highly performant, more secure ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://www.chainguard.dev/unchained/building-chainguards-container-image-registry"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "Container Image Registry",
                                 "marks": [
                                 ],
-                                "value": "Container Image Registry",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " that features passwordless, short-lived token-based authentication,",
                             "marks": [
                             ],
-                            "value": " that features passwordless, short-lived token-based authentication,",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "and critical software supply chain security requirements like Software Bill of Materials (SBOMs) and verified ",
                             "marks": [
                             ],
-                            "value": "and critical software supply chain security requirements like Software Bill of Materials (SBOMs) and verified ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://www.chainguard.dev/unchained/how-chainguard-utilizes-software-signatures-for-supply-chain-security"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "software signatures",
                                 "marks": [
                                 ],
-                                "value": "software signatures",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " by Sigstore.",
                             "marks": [
                             ],
-                            "value": " by Sigstore.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "heading-3",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "‍",
                     "marks": [
                     ],
-                    "value": "‍",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Thank you to our customers and open source adopters ",
                     "marks": [
                       {
                         "type": "bold"
                       }
                     ],
-                    "value": "Thank you to our customers and open source adopters ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "‍",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "heading-3"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "To our early adopter customers and open source projects, thank you for believing in the benefits Chainguard Images have to offer from day one. Jumping to new solutions that haven’t been done before and moving to the bleeding-edge of technology is a big step, but we’ve found a way to make living on this edge stable, reliable and secure. ",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "To-date, Chainguard Images have been pulled over 90 million times. We now also have more than 200 applications in our inventory, with over a million image builds. ‍",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "We also pride ourselves in open source software principles. This is why we are committed to maintaining a free, ",
                     "marks": [
                     ],
-                    "value": "We also pride ourselves in open source software principles. This is why we are committed to maintaining a free, ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
+                    "nodeType": "hyperlink",
                     "data": {
                       "uri": "https://console.enforce.dev/auth/login"
                     },
                     "content": [
                       {
-                        "data": {
-                        },
+                        "nodeType": "text",
+                        "value": "public tier",
                         "marks": [
                         ],
-                        "value": "public tier",
-                        "nodeType": "text"
+                        "data": {
+                        }
                       }
-                    ],
-                    "nodeType": "hyperlink"
+                    ]
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": " of Chainguard Images for all developers and open source maintainers to benefit from into the future. ",
                     "marks": [
                     ],
-                    "value": " of Chainguard Images for all developers and open source maintainers to benefit from into the future. ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "embedded-asset-block",
                 "data": {
                   "target": {
                     "sys": {
@@ -4760,573 +4931,573 @@
                   }
                 },
                 "content": [
-                ],
-                "nodeType": "embedded-asset-block"
+                ]
               },
               {
+                "nodeType": "heading-3",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Enterprise-ready capabilities and features ",
                     "marks": [
                       {
                         "type": "bold"
                       }
                     ],
-                    "value": "Enterprise-ready capabilities and features ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "heading-3"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "What started as a secret project quickly turned into a way for Chainguard to revolutionize the way organizations address vulnerabilities and maintain the open source software they consume. Over the past year, we have rolled out many enterprise-ready capabilities and features across the Chainguard Images product suite, including: ",
                     "marks": [
                     ],
-                    "value": "What started as a secret project quickly turned into a way for Chainguard to revolutionize the way organizations address vulnerabilities and maintain the open source software they consume. Over the past year, we have rolled out many enterprise-ready capabilities and features across the Chainguard Images product suite, including: ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "unordered-list",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "",
                             "marks": [
                             ],
-                            "value": "",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://edu.chainguard.dev/chainguard/chainguard-images/using-the-tag-history-api/?__hstc=1638499.fe4c4ce10b9c135eb32b6fb89af1a890.1695314623306.1706756459293.1706773729644.76&__hssc=1638499.8.1706773729644&__hsfp=3857295638"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "Tag History",
                                 "marks": [
                                   {
                                     "type": "bold"
                                   }
                                 ],
-                                "value": "Tag History",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " and Image ",
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": " and Image ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://edu.chainguard.dev/chainguard/chainctl/chainctl-docs/chainctl_images_diff/?__hstc=1638499.fe4c4ce10b9c135eb32b6fb89af1a890.1695314623306.1706756459293.1706773729644.76&__hssc=1638499.8.1706773729644&__hsfp=3857295638"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "Diff APIs",
                                 "marks": [
                                   {
                                     "type": "bold"
                                   }
                                 ],
-                                "value": "Diff APIs",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": ": ",
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": ": ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "These features help enterprises understand the difference between Image builds, so they can see the speed and comprehensive updates occurring within their Chainguard Images and help determine when to update to the latest version.",
                             "marks": [
                             ],
-                            "value": "These features help enterprises understand the difference between Image builds, so they can see the speed and comprehensive updates occurring within their Chainguard Images and help determine when to update to the latest version.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Vulnerability comparisons: ",
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": "Vulnerability comparisons: ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Users can now search known vulnerabilities and compare external images alongside Chainguard Images in ",
                             "marks": [
                             ],
-                            "value": "Users can now search known vulnerabilities and compare external images alongside Chainguard Images in ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://edu.chainguard.dev//chainguard/chainguard-images/vuln-comparison/?__hstc=1638499.fe4c4ce10b9c135eb32b6fb89af1a890.1695314623306.1706756459293.1706773729644.76&__hssc=1638499.8.1706773729644&__hsfp=3857295638"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "Chainguard Academy",
                                 "marks": [
                                 ],
-                                "value": "Chainguard Academy",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "",
                             "marks": [
                             ],
-                            "value": "",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       },
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": ".Enterprise user management enhancements: Building user management features with the tools and platforms customers are already using is critical for helping organizations unlock the benefits of Chainguard faster. We’ve enabled organizations to integrate with Chainguard using their internal enterprise identity platform provider (IdP) like ",
                             "marks": [
                             ],
-                            "value": ".Enterprise user management enhancements: Building user management features with the tools and platforms customers are already using is critical for helping organizations unlock the benefits of Chainguard faster. We’ve enabled organizations to integrate with Chainguard using their internal enterprise identity platform provider (IdP) like ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://edu.chainguard.dev/chainguard/chainguard-enforce/authentication/example-idps/okta/?__hstc=1638499.fe4c4ce10b9c135eb32b6fb89af1a890.1695314623306.1706756459293.1706773729644.76&__hssc=1638499.8.1706773729644&__hsfp=3857295638"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "Okta",
                                 "marks": [
                                 ],
-                                "value": "Okta",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": ", ",
                             "marks": [
                             ],
-                            "value": ", ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://edu.chainguard.dev/chainguard/chainguard-enforce/authentication/example-idps/ping-id/?__hstc=1638499.fe4c4ce10b9c135eb32b6fb89af1a890.1695314623306.1706756459293.1706773729644.76&__hssc=1638499.8.1706773729644&__hsfp=3857295638"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "Ping",
                                 "marks": [
                                 ],
-                                "value": "Ping",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": ", ",
                             "marks": [
                             ],
-                            "value": ", ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://edu.chainguard.dev/chainguard/chainguard-enforce/authentication/example-idps/azure-ad/?__hstc=1638499.fe4c4ce10b9c135eb32b6fb89af1a890.1695314623306.1706756459293.1706773729644.76&__hssc=1638499.8.1706773729644&__hsfp=3857295638"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "Azure AD",
                                 "marks": [
                                 ],
-                                "value": "Azure AD",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " and more via OIDC workflows. We also heard feedback from customers about their need to standardize on Terraform. The Chainguard Terraform provider is now certified and publicly available for Chainguard Images to allow for greater ability to manage accounts, users, and access permissions at scale. These user management features in Chainguard Images offer enterprises more organizational control, flexibility, and security over their accounts.",
                             "marks": [
                             ],
-                            "value": " and more via OIDC workflows. We also heard feedback from customers about their need to standardize on Terraform. The Chainguard Terraform provider is now certified and publicly available for Chainguard Images to allow for greater ability to manage accounts, users, and access permissions at scale. These user management features in Chainguard Images offer enterprises more organizational control, flexibility, and security over their accounts.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Cloud Marketplace expansion: ",
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": "Cloud Marketplace expansion: ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Chainguard Images are now available in the ",
                             "marks": [
                             ],
-                            "value": "Chainguard Images are now available in the ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://aws.amazon.com/marketplace/pp/prodview-hqh3qlqbdbaqo"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "AWS Marketplace",
                                 "marks": [
                                 ],
-                                "value": "AWS Marketplace",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": ". The availability of these listings makes it easier for organizations using AWS to discover, purchase, and deploy Chainguard Images in their environments or leverage existing spend and credit commits towards their Chainguard Images usage.",
                             "marks": [
                             ],
-                            "value": ". The availability of these listings makes it easier for organizations using AWS to discover, purchase, and deploy Chainguard Images in their environments or leverage existing spend and credit commits towards their Chainguard Images usage.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Enterprise and open source scanner support: ",
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": "Enterprise and open source scanner support: ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Leading scanners like Grype, Prisma Cloud, Snyk, Trivy, and Wiz ",
                             "marks": [
                             ],
-                            "value": "Leading scanners like Grype, Prisma Cloud, Snyk, Trivy, and Wiz ",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
+                            "nodeType": "hyperlink",
                             "data": {
                               "uri": "https://www.chainguard.dev/unchained/a-growing-ecosystem-of-vulnerability-scanners-that-now-support-chainguard-images-and-wolfi"
                             },
                             "content": [
                               {
-                                "data": {
-                                },
+                                "nodeType": "text",
+                                "value": "now support",
                                 "marks": [
                                 ],
-                                "value": "now support",
-                                "nodeType": "text"
+                                "data": {
+                                }
                               }
-                            ],
-                            "nodeType": "hyperlink"
+                            ]
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " scans within Chainguard Images and Wolfi. This growing ecosystem of scanner support enables our Chainguard Images customers and community users to continue leveraging the tools and workflows they use today for monitoring and prioritizing vulnerability scan results.",
                             "marks": [
                             ],
-                            "value": " scans within Chainguard Images and Wolfi. This growing ecosystem of scanner support enables our Chainguard Images customers and community users to continue leveraging the tools and workflows they use today for monitoring and prioritizing vulnerability scan results.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   },
                   {
+                    "nodeType": "list-item",
                     "data": {
                     },
                     "content": [
                       {
+                        "nodeType": "paragraph",
                         "data": {
                         },
                         "content": [
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": "Enterprise SLAs:",
                             "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": "Enterprise SLAs:",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           },
                           {
-                            "data": {
-                            },
+                            "nodeType": "text",
+                            "value": " We provide Chainguard Images customers with an SLA on vulnerability remediation for vulnerabilities detected by scanners. This means that if an update is available for one of our Images, we'll apply it within a specified timeframe, ensuring that our Images remain free of known vulnerabilities and that our customers can deploy with confidence quickly. This dramatically limits noise from your scanners, so when CVEs do show up, you can be confident that they’re real and need attention. This saves your team time triaging vulnerabilities so they can focus on business priorities and innovation.",
                             "marks": [
                             ],
-                            "value": " We provide Chainguard Images customers with an SLA on vulnerability remediation for vulnerabilities detected by scanners. This means that if an update is available for one of our Images, we'll apply it within a specified timeframe, ensuring that our Images remain free of known vulnerabilities and that our customers can deploy with confidence quickly. This dramatically limits noise from your scanners, so when CVEs do show up, you can be confident that they’re real and need attention. This saves your team time triaging vulnerabilities so they can focus on business priorities and innovation.",
-                            "nodeType": "text"
+                            "data": {
+                            }
                           }
-                        ],
-                        "nodeType": "paragraph"
+                        ]
                       }
-                    ],
-                    "nodeType": "list-item"
+                    ]
                   }
-                ],
-                "nodeType": "unordered-list"
+                ]
               },
               {
+                "nodeType": "heading-3",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "The future to a frictionless FIPS and FedRAMP journey",
                     "marks": [
                       {
                         "type": "bold"
                       }
                     ],
-                    "value": "The future to a frictionless FIPS and FedRAMP journey",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "heading-3"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
-                    "marks": [
-                    ],
+                    "nodeType": "text",
                     "value": "Achieving zero-known, High/Critical vulnerabilities in container environments is a requirement for meeting or maintaining certifications for most of today’s widely-required compliance frameworks, such as FedRAMP, StateRAMP, PCI, PCI DSS, and SOC2.",
-                    "nodeType": "text"
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "The compliance use cases for Chainguard Images have received exceptional response from the market and existing customers. If you are looking for a hardened container solution that can help you reach your FedRAMP goals, Chainguard Images is the answer. Today, we provide a number of ",
                     "marks": [
                     ],
-                    "value": "The compliance use cases for Chainguard Images have received exceptional response from the market and existing customers. If you are looking for a hardened container solution that can help you reach your FedRAMP goals, Chainguard Images is the answer. Today, we provide a number of ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
+                    "nodeType": "hyperlink",
                     "data": {
                       "uri": "https://www.chainguard.dev/unchained/chainguard-images-fips-validation"
                     },
                     "content": [
                       {
-                        "data": {
-                        },
+                        "nodeType": "text",
+                        "value": "FIPS-enabled",
                         "marks": [
                         ],
-                        "value": "FIPS-enabled",
-                        "nodeType": "text"
+                        "data": {
+                        }
                       }
-                    ],
-                    "nodeType": "hyperlink"
+                    ]
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": " base images for popular language ecosystems and applications. We also work with customers to create FIPS-ready images for their specific application needs. With Chainguard Images, which are continuously patched and rebuilt daily for security, you can seamlessly meet rigorous compliance vulnerability scanning requirements for container security.",
                     "marks": [
                     ],
-                    "value": " base images for popular language ecosystems and applications. We also work with customers to create FIPS-ready images for their specific application needs. With Chainguard Images, which are continuously patched and rebuilt daily for security, you can seamlessly meet rigorous compliance vulnerability scanning requirements for container security.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "heading-3",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "We’re just getting started… ",
                     "marks": [
                       {
                         "type": "bold"
                       }
                     ],
-                    "value": "We’re just getting started… ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "heading-3"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "It’s true, Chainguard Images has come a long way since its early days, but our work is just beginning. With the infusion of new funding, we are going to continue elevating the user experience through real-time security advisories and vital information on vulnerability remediation and updates for OSS software. This encompasses end-of-life notifications and the introduction of new versions.",
                     "marks": [
                     ],
-                    "value": "It’s true, Chainguard Images has come a long way since its early days, but our work is just beginning. With the infusion of new funding, we are going to continue elevating the user experience through real-time security advisories and vital information on vulnerability remediation and updates for OSS software. This encompasses end-of-life notifications and the introduction of new versions.",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "blockquote",
                 "data": {
                 },
                 "content": [
                   {
+                    "nodeType": "paragraph",
                     "data": {
                     },
                     "content": [
                       {
-                        "data": {
-                        },
+                        "nodeType": "text",
+                        "value": "We also are focused on expanding our ecosystem from product integrations to strategic partnerships that will help make adopting and purchasing Chainguard Images seamless for organizations of all sizes and across all industries.",
                         "marks": [
                         ],
-                        "value": "\"We also are focused on expanding our ecosystem from product integrations to strategic partnerships that will help make adopting and purchasing Chainguard Images seamless for organizations of all sizes and across all industries.\"",
-                        "nodeType": "text"
+                        "data": {
+                        }
                       }
-                    ],
-                    "nodeType": "paragraph"
+                    ]
                   }
-                ],
-                "nodeType": "blockquote"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "- John Smith",
                     "marks": [
                     ],
-                    "value": "- John Smith",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               },
               {
+                "nodeType": "embedded-asset-block",
                 "data": {
                   "target": {
                     "sys": {
@@ -5337,29 +5508,80 @@
                   }
                 },
                 "content": [
-                ],
-                "nodeType": "embedded-asset-block"
+                ]
               },
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "{\n  context: \"https://openvex.dev/ns\";\n  id: \"https://openvex.dev/docs/public/vex-cfaef18d38537412a0307ec266bed56aa88fa58b7c1f2c6b8c9ef997028ba4bd\";\n  author: \"Unknown Author\";\n  role: \"Document Creator\";\n  timestamp: \"2023-01-10T20:24:50.498233798-06:00\";\n  version: \"1\";\n  statements: [\n    {\n      vulnerability: \"CVE-2014-123456\",\n      products: [\"pkg:apk/wolfi/trivy@0.36.1-r0?arch=x86_64\"],\n      status: \"not_affected\",\n      justification: \"component_not_present\",\n    },\n  ];\n}",
                     "marks": [
                       {
                         "type": "code"
                       }
                     ],
-                    "value": "provider \"chainguard\" {  login_options {    organization_name = \"my-org.com\"    # identity_id is the exact ID of an assumable identity.    # Get this ID with chainctl iam identities list    identity_id = \"1f127a7c0609329f04b43d845cf80eea4247a07c/d6305475446bbef6\"  }}",
-                    "nodeType": "text"
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "\n",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Lastly, ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "entry-hyperlink",
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "4TLYPQqoEX4wxMouT3DEqr",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "here",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " is a link to my other blog.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
         }
       }
@@ -5380,7 +5602,7 @@
         "id": "3LsilfHAYjrs43IFfpCAdN",
         "type": "Entry",
         "createdAt": "2024-02-02T07:04:23.330Z",
-        "updatedAt": "2024-02-02T07:10:20.155Z",
+        "updatedAt": "2024-02-06T18:55:44.711Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5388,8 +5610,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2024-02-02T07:10:20.155Z",
+        "publishedVersion": 7,
+        "publishedAt": "2024-02-06T18:55:44.711Z",
         "firstPublishedAt": "2024-02-02T07:10:20.155Z",
         "createdBy": {
           "sys": {
@@ -5405,8 +5627,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 1,
-        "version": 6,
+        "publishedCounter": 2,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5448,6 +5670,13 @@
                 "linkType": "Entry",
                 "id": "5wkA3C9CTqfM3BTkcjuCs6"
               }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6tOwofc0jL5Q0T8QwMTU1n"
+              }
             }
           ]
         }
@@ -5469,7 +5698,7 @@
         "id": "5wkA3C9CTqfM3BTkcjuCs6",
         "type": "Entry",
         "createdAt": "2024-02-02T07:05:01.770Z",
-        "updatedAt": "2024-02-02T07:10:08.215Z",
+        "updatedAt": "2024-02-05T01:34:03.518Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5477,8 +5706,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 4,
-        "publishedAt": "2024-02-02T07:10:08.215Z",
+        "publishedVersion": 8,
+        "publishedAt": "2024-02-05T01:34:03.518Z",
         "firstPublishedAt": "2024-02-02T07:10:08.215Z",
         "createdBy": {
           "sys": {
@@ -5494,8 +5723,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 1,
-        "version": 5,
+        "publishedCounter": 2,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5524,6 +5753,13 @@
                 "type": "Link",
                 "linkType": "Entry",
                 "id": "3DkzT5VAR1BFUJKidh5YbG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4cprr5AFyTHrQyh5jGRxYh"
               }
             }
           ]
@@ -5633,7 +5869,7 @@
         "id": "4TLYPQqoEX4wxMouT3DEqr",
         "type": "Entry",
         "createdAt": "2024-02-02T07:11:29.043Z",
-        "updatedAt": "2024-02-03T07:14:02.159Z",
+        "updatedAt": "2024-02-04T03:01:56.667Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5641,8 +5877,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 14,
-        "publishedAt": "2024-02-03T07:14:02.159Z",
+        "publishedVersion": 23,
+        "publishedAt": "2024-02-04T03:01:56.667Z",
         "firstPublishedAt": "2024-02-02T07:12:27.962Z",
         "createdBy": {
           "sys": {
@@ -5658,8 +5894,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 3,
-        "version": 15,
+        "publishedCounter": 6,
+        "version": 24,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5692,6 +5928,11 @@
             "Felipe Ocampo"
           ]
         },
+        "tags": {
+          "en-US": [
+            "News"
+          ]
+        },
         "mainImage": {
           "en-US": {
             "sys": {
@@ -5706,65 +5947,381 @@
         },
         "blogContent": {
           "en-US": {
+            "nodeType": "document",
             "data": {
             },
             "content": [
               {
+                "nodeType": "paragraph",
                 "data": {
                 },
                 "content": [
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "Hello! This is my first blog. There might be some ",
                     "marks": [
                     ],
-                    "value": "Hello! This is my first blog. There might be some ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "bold",
                     "marks": [
                       {
                         "type": "bold"
                       }
                     ],
-                    "value": "bold",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": " here, or there might be some ",
                     "marks": [
                     ],
-                    "value": " here, or there might be some ",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": "italic",
                     "marks": [
                       {
                         "type": "italic"
                       }
                     ],
-                    "value": "italic",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   },
                   {
-                    "data": {
-                    },
+                    "nodeType": "text",
+                    "value": " here! Who knows!?!",
                     "marks": [
                     ],
-                    "value": " here! Who knows!?!",
-                    "nodeType": "text"
+                    "data": {
+                    }
                   }
-                ],
-                "nodeType": "paragraph"
+                ]
               }
-            ],
-            "nodeType": "document"
+            ]
           }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "4cprr5AFyTHrQyh5jGRxYh",
+        "type": "Entry",
+        "createdAt": "2024-02-05T01:26:37.583Z",
+        "updatedAt": "2024-02-05T01:29:24.757Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2024-02-05T01:29:24.757Z",
+        "firstPublishedAt": "2024-02-05T01:29:24.757Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "generalContentCard"
+          }
+        }
+      },
+      "fields": {
+        "pageSectionName": {
+          "en-US": "Unchained Section 1 Main Content Card"
+        },
+        "heading": {
+          "en-US": "Unchained"
+        },
+        "subheading": {
+          "en-US": "A curated collection of writings, research, and solutions"
+        },
+        "descriptionText": {
+          "en-US": "Read the latest software supply chain and open source security updates from our experts."
+        },
+        "ctas": {
+          "en-US": {
+            "/#": "Subscribe to Newsletter"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "6tOwofc0jL5Q0T8QwMTU1n",
+        "type": "Entry",
+        "createdAt": "2024-02-06T18:22:40.944Z",
+        "updatedAt": "2024-02-06T18:41:48.440Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-02-06T18:41:48.440Z",
+        "firstPublishedAt": "2024-02-06T18:25:44.208Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "pageSection"
+          }
+        }
+      },
+      "fields": {
+        "pageSectionName": {
+          "en-US": "Unchained Section 2"
+        },
+        "pageSectionParts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5sDrtH5we8GDSLuOwL18hQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2GISP3WstCIT8rRHTokph1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "5sDrtH5we8GDSLuOwL18hQ",
+        "type": "Entry",
+        "createdAt": "2024-02-06T18:22:59.176Z",
+        "updatedAt": "2024-02-06T18:23:38.350Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2024-02-06T18:23:38.350Z",
+        "firstPublishedAt": "2024-02-06T18:23:38.350Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "blogs"
+          }
+        }
+      },
+      "fields": {
+        "blogsPageName": {
+          "en-US": "Unchained Section 2 Blogs Content"
+        },
+        "allBlogs": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "2GISP3WstCIT8rRHTokph1",
+        "type": "Entry",
+        "createdAt": "2024-02-06T18:39:07.068Z",
+        "updatedAt": "2024-02-06T18:41:14.110Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-02-06T18:41:14.110Z",
+        "firstPublishedAt": "2024-02-06T18:40:35.341Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "searchBar"
+          }
+        }
+      },
+      "fields": {
+        "searchBarName": {
+          "en-US": "Unchained Section 2 Search Bar"
+        },
+        "placeholder": {
+          "en-US": "Search Unchained"
+        },
+        "optionsLabel": {
+          "en-US": "Categories"
+        },
+        "options": {
+          "en-US": [
+            "All",
+            "Research",
+            "Product",
+            "Security",
+            "Open Source",
+            "News",
+            "Engineering"
+          ]
         }
       }
     }

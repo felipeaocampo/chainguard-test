@@ -16,7 +16,7 @@ export default function HubSpotForm() {
         //@ts-ignore
         window.hbspt.forms.create({
           portalId: "21744766",
-          formId: "a957b911-8cfe-4915-bafd-59e412749131",
+          formId: "8771b667-8503-46a2-85c1-34b4d286519f",
           target: "#hubspotForm",
           region: "na1",
         });
@@ -27,6 +27,7 @@ export default function HubSpotForm() {
   return <div id="hubspotForm" className="hubspotForm"></div>;
 }
 
+//THIS IS THE TEST FORM W/ THE SETTING TO TAKE ON THE STYLING OF THE CURRENT FILE(S)
 {
   /* <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
 <script>
@@ -35,5 +36,17 @@ region: "na1",
 portalId: "21744766",
 formId: "a957b911-8cfe-4915-bafd-59e412749131"
 });
+</script> */
+}
+
+//THIS IS THE ACTUAL/REAL FORM WITH SET STYLIES
+{
+  /* <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "21744766",
+    formId: "8771b667-8503-46a2-85c1-34b4d286519f"
+  });
 </script> */
 }

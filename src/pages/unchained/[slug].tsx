@@ -63,6 +63,17 @@ const options: Options = {
       //@ts-ignore
       const text = node.content.find((item) => item.nodeType === "text")?.value;
 
+      const test = node.data.uri.includes("http://localhost:3000/");
+
+      if (test) {
+        const x =
+          "/unchained" +
+          node.data.uri.replace("http://localhost:3000/unchained", "");
+        console.log("X: ", x);
+
+        return <Link href={x}>{text}</Link>;
+      }
+
       return (
         <a href={node.data.uri} target="_blank" rel="noopener noreferrer">
           {text}
@@ -78,6 +89,15 @@ const options: Options = {
         )?.value;
         const slug = node.data.target.fields.blogSlug;
         return <Link href={`/unchained/${slug}`}>{text}</Link>;
+      }
+      if (node.data.target.sys.contentType.sys.id === "generalPage") {
+        // console.log("LINK TEST: ", node);
+        const text = node.content.find(
+          (item) => item.nodeType === "text"
+          //@ts-ignore
+        )?.value;
+        const slug = node.data?.target.fields.pageSlug;
+        return <Link href={`${slug}`}>{text}</Link>;
       }
     },
     [BLOCKS.EMBEDDED_ASSET]: (node) => {

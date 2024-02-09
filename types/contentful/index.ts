@@ -6,4 +6,5 @@ export type { TypeCustomersSection, TypeCustomersSectionFields, TypeCustomersSec
 export type { TypeGeneralContentCard, TypeGeneralContentCardFields, TypeGeneralContentCardSkeleton } from "./TypeGeneralContentCard";
 export type { TypeGeneralPage, TypeGeneralPageFields, TypeGeneralPageSkeleton } from "./TypeGeneralPage";
 export type { TypePageSection, TypePageSectionFields, TypePageSectionSkeleton } from "./TypePageSection";
+export type { TypeSearchBar, TypeSearchBarFields, TypeSearchBarSkeleton } from "./TypeSearchBar";
 export type { TypeSeoMetadata, TypeSeoMetadataFields, TypeSeoMetadataSkeleton } from "./TypeSeoMetadata";

@@ -1,6 +1,4 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
-
+import { GetStaticProps } from "next";
 import { client } from "@/lib/client";
 import UnchainedSection1 from "@/components/Unchained/UnchainedSection1";
 import {
@@ -13,8 +11,7 @@ import {
   UnchainedSection1Props,
   parseContentfulUnchainedSection1,
 } from "@/lib/unchained/unchainedSection1";
-import { ReactElement, ReactNode } from "react";
-import { GetStaticProps } from "next";
+import { parseContentfulUnchainedSection2 } from "@/lib/unchained/unchainedSection2";
 
 export type UnchainedPageProps = {
   unchainedSection1Props: UnchainedSection1Props;
@@ -50,12 +47,17 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const typedUnchainedSection1 = page.items[0].fields
     .pageSection[0] as TypePageSection<undefined, string>;
+  const typedUnchainedSection2 = page.items[0].fields
+    .pageSection[1] as TypePageSection<undefined, string>;
 
   const unchainedSection1Data = parseContentfulUnchainedSection1(
     typedUnchainedSection1
   );
+  const unchainedSection2Data = await parseContentfulUnchainedSection2(
+    typedUnchainedSection2
+  );
 
-  console.log("/unchained getstaticprops");
+  // console.log("IS THIS IT: ", unchainedSection2Data);
 
   return {
     props: {

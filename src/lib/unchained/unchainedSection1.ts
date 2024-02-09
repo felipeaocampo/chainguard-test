@@ -12,6 +12,10 @@ import { parseBlogCard } from "./parseBlogCard";
 
 // https://maxschmitt.me/posts/nextjs-contentful-typescript HELPFUL ARTICLE
 
+type UnchainedSection1Cta = {
+  "/#": string;
+};
+
 export type BlogCard = {
   cardImg: ContentImage | null;
   category: string[];
@@ -25,11 +29,11 @@ export type BlogCard = {
 
 export interface UnchainedSection1Props {
   pagesectionName: string;
+  heading: string;
+  subheading: string;
+  description: string;
+  ctaText: string;
   featuredBlogs: BlogCard[];
-  // heading: string;
-  // subheading: string;
-  // description: string;
-  // benefitsCards: benefitsCard[];
 }
 
 export function parseContentfulUnchainedSection1(
@@ -47,28 +51,34 @@ export function parseContentfulUnchainedSection1(
     return null;
   }
 
-  const sectionGeneralContentCard1 = pageSectionEntry.fields
+  const unchainedSection1MainContentCard = pageSectionEntry.fields
+    .pageSectionParts[1] as TypeGeneralContentCard<undefined, string>;
+  const unchainedSection1BlogsData = pageSectionEntry.fields
     .pageSectionParts[0] as TypeBlogs<undefined, string>;
 
-  if (!sectionGeneralContentCard1.fields.featuredBlogs) {
+  const cta = unchainedSection1MainContentCard.fields
+    .ctas as UnchainedSection1Cta;
+
+  const [ctaText] = Object.values(cta);
+
+  if (!unchainedSection1BlogsData.fields.featuredBlogs) {
     return null;
   }
 
   //WRITE A FUNC THAT WILL PARSE OUR EACH BLOG CARD GIVING YOU EXACTLY THE NECESSARY INFO. SEE BLOGCARD TYPE ABOVE FOR EXACT DATA NEEDED
-  const featuredBlogsData = sectionGeneralContentCard1.fields
+  const featuredBlogsData = unchainedSection1BlogsData.fields
     .featuredBlogs as TypeBlog<undefined, string>[];
 
   const featuredBlogs = featuredBlogsData.map((blog) => parseBlogCard(blog));
 
-  // console.log(featuredBlogs[1].fields.blogContent);
+  // console.log(unchainedSection1MainContentCard);
 
   return {
-    pagesectionName: sectionGeneralContentCard1.fields.blogsPageName || "",
+    pagesectionName: unchainedSection1BlogsData.fields.blogsPageName || "",
+    heading: unchainedSection1MainContentCard.fields.heading || "",
+    subheading: unchainedSection1MainContentCard.fields.subheading || "",
+    description: unchainedSection1MainContentCard.fields.descriptionText || "",
+    ctaText,
     featuredBlogs,
-    // pagesectionName: sectionGeneralContentCard1.fields.pageSectionName || "",
-    // heading: sectionGeneralContentCard1.fields.heading || "",
-    // subheading: sectionGeneralContentCard1.fields.subheading || "",
-    // description: sectionGeneralContentCard1.fields.descriptionText || "",
-    // benefitsCards: benefitsData,
   };
 }
