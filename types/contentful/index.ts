@@ -8,3 +8,4 @@ export type { TypeGeneralPage, TypeGeneralPageFields, TypeGeneralPageSkeleton } 
 export type { TypePageSection, TypePageSectionFields, TypePageSectionSkeleton } from "./TypePageSection";
 export type { TypeSearchBar, TypeSearchBarFields, TypeSearchBarSkeleton } from "./TypeSearchBar";
 export type { TypeSeoMetadata, TypeSeoMetadataFields, TypeSeoMetadataSkeleton } from "./TypeSeoMetadata";
+export type { TypeTestContent, TypeTestContentFields, TypeTestContentSkeleton } from "./TypeTestContent";

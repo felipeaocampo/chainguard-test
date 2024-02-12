@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import { client } from "@/lib/client";
+import { client, previewClient } from "@/lib/client";
 import UnchainedSection1 from "@/components/Unchained/UnchainedSection1";
 import {
   TypeGeneralPageSkeleton,
@@ -12,6 +12,7 @@ import {
   parseContentfulUnchainedSection1,
 } from "@/lib/unchained/unchainedSection1";
 import { parseContentfulUnchainedSection2 } from "@/lib/unchained/unchainedSection2";
+import stringifySafe from "json-stringify-safe";
 
 export type UnchainedPageProps = {
   unchainedSection1Props: UnchainedSection1Props;
@@ -31,8 +32,10 @@ export default function UnchainedPage({
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const page = await client.getEntries<TypeGeneralPageSkeleton>({
+export const getStaticProps: GetStaticProps = async ({ preview }) => {
+  const contentful = preview ? previewClient : client;
+
+  const page = await contentful.getEntries<TypeGeneralPageSkeleton>({
     content_type: "generalPage",
     "fields.pageName": "Unchained Page",
     include: 10,

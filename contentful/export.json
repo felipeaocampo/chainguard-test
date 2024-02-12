@@ -1236,6 +1236,129 @@
           }
         }
       ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "testContent",
+        "type": "ContentType",
+        "createdAt": "2024-02-12T07:38:31.102Z",
+        "updatedAt": "2024-02-12T07:38:31.755Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2024-02-12T07:38:31.755Z",
+        "firstPublishedAt": "2024-02-12T07:38:31.755Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Test Content",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "blog",
+          "name": "Blog",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-1",
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
     }
   ],
   "tags": [
@@ -1948,6 +2071,67 @@
           "widgetNamespace": "builtin"
         }
       ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "5osmwku1bn9f",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2024-02-12T07:38:31.935Z",
+        "createdBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-02-12T07:38:32.429Z",
+        "updatedBy": {
+          "sys": {
+            "id": "4WyQYHyKILu3LMGKmCYuG6",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "testContent",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "blog",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
     }
   ],
   "entries": [
@@ -2169,7 +2353,7 @@
         "id": "7o5Aaz0EoSijTJSkBafK2a",
         "type": "Entry",
         "createdAt": "2023-12-26T05:34:00.617Z",
-        "updatedAt": "2023-12-26T05:36:49.216Z",
+        "updatedAt": "2024-02-12T05:44:04.086Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2177,8 +2361,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 15,
-        "publishedAt": "2023-12-26T05:36:49.216Z",
+        "publishedVersion": 23,
+        "publishedAt": "2024-02-09T08:19:03.730Z",
         "firstPublishedAt": "2023-12-26T05:36:49.216Z",
         "createdBy": {
           "sys": {
@@ -2194,8 +2378,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 1,
-        "version": 16,
+        "publishedCounter": 5,
+        "version": 28,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2241,7 +2425,7 @@
         },
         "floatingHeaderText": {
           "en-US": {
-            "/unchained/:some-blog": "New Chainguard Images Directory Read more"
+            "/test-blog": "New Chainguard Images Directory Read more"
           }
         }
       }
@@ -5602,7 +5786,7 @@
         "id": "3LsilfHAYjrs43IFfpCAdN",
         "type": "Entry",
         "createdAt": "2024-02-02T07:04:23.330Z",
-        "updatedAt": "2024-02-06T18:55:44.711Z",
+        "updatedAt": "2024-02-12T05:40:58.212Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5610,8 +5794,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2024-02-06T18:55:44.711Z",
+        "publishedVersion": 10,
+        "publishedAt": "2024-02-12T05:40:58.212Z",
         "firstPublishedAt": "2024-02-02T07:10:20.155Z",
         "createdBy": {
           "sys": {
@@ -5627,8 +5811,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 2,
-        "version": 8,
+        "publishedCounter": 4,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5651,7 +5835,7 @@
           "en-US": "Unchained Page"
         },
         "pageSlug": {
-          "en-US": "unchained-page"
+          "en-US": "unchained"
         },
         "pageMetadata": {
           "en-US": {
@@ -5869,7 +6053,7 @@
         "id": "4TLYPQqoEX4wxMouT3DEqr",
         "type": "Entry",
         "createdAt": "2024-02-02T07:11:29.043Z",
-        "updatedAt": "2024-02-04T03:01:56.667Z",
+        "updatedAt": "2024-02-12T06:59:07.814Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5877,8 +6061,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 23,
-        "publishedAt": "2024-02-04T03:01:56.667Z",
+        "publishedVersion": 90,
+        "publishedAt": "2024-02-12T05:07:15.814Z",
         "firstPublishedAt": "2024-02-02T07:12:27.962Z",
         "createdBy": {
           "sys": {
@@ -5894,8 +6078,8 @@
             "id": "4WyQYHyKILu3LMGKmCYuG6"
           }
         },
-        "publishedCounter": 6,
-        "version": 24,
+        "publishedCounter": 21,
+        "version": 97,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5977,7 +6161,26 @@
                   },
                   {
                     "nodeType": "text",
-                    "value": " here, or there might be some ",
+                    "value": " here, or there ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": "might",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " be some ",
                     "marks": [
                     ],
                     "data": {
@@ -5996,7 +6199,386 @@
                   },
                   {
                     "nodeType": "text",
-                    "value": " here! Who knows!?!",
+                    "value": " here! Who knows!?! test test asdf ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "data": {
+                      "uri": "http://localhost:3000/unchained/celebrating-innovation-in-open-source-software-and-container-image-security"
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "Here",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " is my second blog.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This is a link to the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "entry-hyperlink",
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "4GpCxSdhnotHZfV2tQgKoh",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "home page",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ".",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Here is an intentional circular ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "entry-hyperlink",
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "3JO2kTN0Dpl50jZWnLYs5c",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "reference",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ". ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Hello.. is there anybody here? Can you even see this? Yes, I totally can!",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "What if I add a code block in here...",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "const test = 'hello world'",
+                    "marks": [
+                      {
+                        "type": "code"
+                      }
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Can I insert an image next:",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "embedded-asset-block",
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "6TzW7dwswBy6uYXiKbSw90",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "blockquote",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "paragraph",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "I'm going to insert a quote here...",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "-Felipe Ocampo",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "hr",
+                "data": {
+                },
+                "content": [
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "hyperlink",
+                    "data": {
+                      "uri": "https://www.nba.com/"
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "This",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " is a link to the NBA page.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "This is a link to the ",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "entry-hyperlink",
+                    "data": {
+                      "target": {
+                        "sys": {
+                          "id": "3JO2kTN0Dpl50jZWnLYs5c",
+                          "type": "Link",
+                          "linkType": "Entry"
+                        }
+                      }
+                    },
+                    "content": [
+                      {
+                        "nodeType": "text",
+                        "value": "other blog",
+                        "marks": [
+                        ],
+                        "data": {
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": ". Can we make two of the same link? Let's see...",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Is this updating anything?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "is something happening here?",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Ok this is the last one for real.",
                     "marks": [
                     ],
                     "data": {
@@ -6025,7 +6607,7 @@
         "id": "4cprr5AFyTHrQyh5jGRxYh",
         "type": "Entry",
         "createdAt": "2024-02-05T01:26:37.583Z",
-        "updatedAt": "2024-02-05T01:29:24.757Z",
+        "updatedAt": "2024-02-12T05:40:48.422Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -6051,7 +6633,7 @@
           }
         },
         "publishedCounter": 1,
-        "version": 13,
+        "version": 19,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6322,6 +6904,99 @@
             "News",
             "Engineering"
           ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "V5lxPH8QjQoAcOenV2bCI",
+        "type": "Entry",
+        "createdAt": "2024-02-12T07:39:00.147Z",
+        "updatedAt": "2024-02-12T07:39:25.125Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-02-12T07:39:25.125Z",
+        "firstPublishedAt": "2024-02-12T07:39:25.125Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "testContent"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Felipe Ocampo"
+        },
+        "description": {
+          "en-US": "This is supposed to be a long description!"
+        },
+        "blog": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Test blog content right here.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         }
       }
     }
@@ -7655,6 +8330,80 @@
             },
             "fileName": "blog-img2.png",
             "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "5osmwku1bn9f"
+          }
+        },
+        "id": "6TzW7dwswBy6uYXiKbSw90",
+        "type": "Asset",
+        "createdAt": "2024-02-11T22:03:47.227Z",
+        "updatedAt": "2024-02-11T22:12:52.343Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2024-02-11T22:12:52.343Z",
+        "firstPublishedAt": "2024-02-11T22:12:52.343Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "4WyQYHyKILu3LMGKmCYuG6"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Jason T Straussman"
+        },
+        "description": {
+          "en-US": "An image of Jason, the Web developer at Chainguard"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/5osmwku1bn9f/6TzW7dwswBy6uYXiKbSw90/fc2d7e556d2a30b37e012ec92135d5b1/client-profile-1.jpg",
+            "details": {
+              "size": 20458,
+              "image": {
+                "width": 317,
+                "height": 320
+              }
+            },
+            "fileName": "client-profile-1.jpg",
+            "contentType": "image/jpeg"
           }
         }
       }

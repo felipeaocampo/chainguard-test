@@ -1,4 +1,4 @@
-import { client } from "@/lib/client";
+import { client, previewClient } from "@/lib/client";
 import { parseContentfulContentImage } from "@/lib/contentImage";
 
 import {
@@ -20,6 +20,7 @@ import HomeSection3, { HomeSection3Props } from "@/components/Home/Section3";
 import HomeSection4, { HomeSection4Props } from "@/components/Home/Section4";
 import HomeSection5, { HomeSection5Props } from "@/components/Home/Section5";
 import HomeSection6, { HomeSection6Props } from "@/components/Home/Section6";
+import { GetStaticProps } from "next";
 
 export type HomePageProps = {
   section1Props: HomeSection1Props;
@@ -28,6 +29,7 @@ export type HomePageProps = {
   section4Props: HomeSection4Props;
   section5Props: HomeSection5Props;
   section6Props: HomeSection6Props;
+  preview: Boolean;
 };
 
 export default function Home({
@@ -54,8 +56,10 @@ export default function Home({
   );
 }
 
-export const getStaticProps = async () => {
-  const page = await client.getEntries<TypeGeneralPageSkeleton>({
+export const getStaticProps: GetStaticProps = async ({ preview }) => {
+  const contentful = preview ? previewClient : client;
+
+  const page = await contentful.getEntries<TypeGeneralPageSkeleton>({
     content_type: "generalPage",
     "fields.pageName": "Homepage",
     include: 10,
@@ -121,7 +125,9 @@ export const getStaticProps = async () => {
   const section6Data = parseContentfulHomeSection6(typedSection6);
 
   if (!section1Data?.primaryCta) {
-    return null;
+    return {
+      props: {},
+    };
   }
 
   // console.log(section4Data?.sliderCards[0].slideImg?.alt);
@@ -155,6 +161,7 @@ export const getStaticProps = async () => {
       section4Props: section4Data,
       section5Props: section5Data,
       section6Props: section6Data,
+      preview,
     },
   };
 };

@@ -2,13 +2,15 @@ import hljs from "highlight.js";
 import javascript from "highlight.js/lib/languages/javascript";
 import "highlight.js/styles/base16/pop.css";
 
+import stringifySafe from "json-stringify-safe";
+
 import {
   Options,
   documentToReactComponents,
 } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { client } from "@/lib/client";
+import { client, previewClient } from "@/lib/client";
 import UnchainedSection1 from "@/components/Unchained/UnchainedSection1";
 import {
   TypeBlogSkeleton,
@@ -21,6 +23,7 @@ import { Document } from "@contentful/rich-text-types";
 import { ReactNode, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
 
 //HIGHLIGHT JS INSTURCTIONS
 // Then register the languages you need
@@ -66,12 +69,13 @@ const options: Options = {
       const test = node.data.uri.includes("http://localhost:3000/");
 
       if (test) {
-        const x =
-          "/unchained" +
-          node.data.uri.replace("http://localhost:3000/unchained", "");
-        console.log("X: ", x);
+        const href = node.data.uri.replace("http://localhost:3000", "");
+        // const x =
+        //   "/unchained" +
+        //   node.data.uri.replace("http://localhost:3000/unchained", "");
+        // console.log("X: ", href);
 
-        return <Link href={x}>{text}</Link>;
+        return <Link href={href}>{text}</Link>;
       }
 
       return (
@@ -118,22 +122,27 @@ const options: Options = {
 
 export default function BlogPost({ blogContent }: { blogContent: Document }) {
   const { slug } = useRouter().query;
+  const post = useContentfulLiveUpdates(blogContent);
+  //console.log("/UNCHAINED/[SLUG]: ORIGINAL", blogContent);
+  //console.log("/UNCHAINED/[SLUG]: POST", post);
+  console.log("slug page has run");
 
   useEffect(() => {
-    hljs.initHighlighting();
+    // hljs.initHighlighting();
+    hljs.highlightAll();
   }, []);
 
   return (
     <section className="mb-[96px] bg-hero-cg-gradient pt-[180px]">
       <h1 className="mb-[24px]">Welcome to the {`${slug} page!`}</h1>
       <div className="mx-auto prose">
-        {documentToReactComponents(blogContent, options)}
+        {documentToReactComponents(post, options)}
       </div>
     </section>
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params, preview }) => {
   if (!params) {
     return {
       props: {
@@ -141,23 +150,29 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     };
   }
-  // console.log("GET STATIC PROPS IS CALLED");
+
+  const contentful = preview ? previewClient : client;
 
   const { slug } = params;
 
-  const blog = await client.getEntries<TypeBlogSkeleton>({
+  const blog = await contentful.getEntries<TypeBlogSkeleton>({
     content_type: "blog",
     "fields.blogSlug": slug as string,
   });
 
-  const test = blog.items[0];
+  const blogData = blog.items[0];
   //console.log("BLOG TEST: ", test);
+
+  const withRemovedCircularRefs = stringifySafe(blogData);
+  // console.log("SLUG TEST: ", test);
+  const formatted = JSON.parse(withRemovedCircularRefs);
+  // console.log("FORMATTED: ", formatted);
 
   //NEED TO CREATE A FUNC THAT'S GOING TO PARSE THE FUNC FOR ONLY THE DATA THAT WE NEED FROM THE BLOG ITSELF
 
   return {
     props: {
-      blogContent: test.fields.blogContent,
+      blogContent: formatted.fields.blogContent,
     },
   };
 };

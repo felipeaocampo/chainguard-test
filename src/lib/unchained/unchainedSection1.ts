@@ -9,6 +9,7 @@ import { ContentImage, parseContentfulContentImage } from "../contentImage";
 import { AssignType } from "@/pages";
 import { ReactNode } from "react";
 import { parseBlogCard } from "./parseBlogCard";
+import stringifySafe from "json-stringify-safe";
 
 // https://maxschmitt.me/posts/nextjs-contentful-typescript HELPFUL ARTICLE
 
@@ -43,17 +44,22 @@ export function parseContentfulUnchainedSection1(
     return null;
   }
 
+  const test = stringifySafe(pageSectionEntry);
+  // console.log("UNCHAINED TEST: ", test);
+  const formatted = JSON.parse(test);
+  // console.log("FORMATTED: ", formatted);
+
   //STEP 1: SEPARATE SECTION INTO PARTS
   //STEP 2: PARSE EACH PART TO ABSTRACT AND TYPE THE NECESSARY DATA
   //STEP 3: RETURN THE NECESSARY DATA
 
-  if (!pageSectionEntry.fields.pageSectionParts) {
+  if (!formatted.fields.pageSectionParts) {
     return null;
   }
 
-  const unchainedSection1MainContentCard = pageSectionEntry.fields
+  const unchainedSection1MainContentCard = formatted.fields
     .pageSectionParts[1] as TypeGeneralContentCard<undefined, string>;
-  const unchainedSection1BlogsData = pageSectionEntry.fields
+  const unchainedSection1BlogsData = formatted.fields
     .pageSectionParts[0] as TypeBlogs<undefined, string>;
 
   const cta = unchainedSection1MainContentCard.fields
