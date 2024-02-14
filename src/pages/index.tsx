@@ -29,7 +29,7 @@ export type HomePageProps = {
   section4Props: HomeSection4Props;
   section5Props: HomeSection5Props;
   section6Props: HomeSection6Props;
-  preview: Boolean;
+  // preview: Boolean;
 };
 
 export default function Home({
@@ -161,7 +161,7 @@ export const getStaticProps: GetStaticProps = async ({ preview }) => {
       section4Props: section4Data,
       section5Props: section5Data,
       section6Props: section6Data,
-      preview,
+      preview: preview || false,
     },
   };
 };

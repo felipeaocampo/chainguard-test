@@ -92,10 +92,6 @@ export function parseContentfulHomeSection2(
 
   const cta = sectionGeneralContentCard.fields.ctas as HomeSection2Cta;
 
-  if (!customerLogos) {
-    return null;
-  }
-
   const [[ctaLink, ctaText]] = Object.entries(cta);
 
   //STEP 2: PARSE EACH PART TO ABSTRACT AND TYPE THE NECESSARY DATA
@@ -107,7 +103,7 @@ export function parseContentfulHomeSection2(
     subheading: sectionGeneralContentCard.fields.subheading || "",
     ctaText: ctaText,
     ctaLink: ctaLink,
-    customerLogos,
+    customerLogos: customerLogos || [],
     customerTestimonials,
   };
 }
