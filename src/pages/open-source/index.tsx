@@ -59,6 +59,7 @@ export const getStaticProps: GetStaticProps = async ({ preview }) => {
 
   const content = await contentful.getEntries<TypeGeneralPageSkeleton>({
     content_type: "generalPage",
+    "fields.pageName": "Open Source",
     include: 10,
   });
   // console.log(content);
