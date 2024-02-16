@@ -44,6 +44,12 @@ export default function Home({
 
   return (
     <main className="font-sans overflow-hidden border-b solid w-full">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, quam
+        nesciunt. Exercitationem debitis distinctio alias placeat nulla cumque
+        blanditiis ea aspernatur accusantium, obcaecati nam quia voluptatem
+        accusamus tempore itaque molestias.
+      </p>
       <div className="w-full bg-hero-cg-gradient">
         <HomeSection1 section1Props={section1Props} />
       </div>
