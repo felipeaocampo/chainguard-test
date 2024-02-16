@@ -9,7 +9,7 @@ import { ContentImage, parseContentfulContentImage } from "../contentImage";
 
 export interface OpenSourceSection1 {
   pageSectionName: string;
-  heading: string;
+  heading: { id: string; content: string };
   subheading: string;
   description: string;
   img: ContentImage | null;
@@ -38,7 +38,7 @@ export function parseContentfulOpenSourceSection1(
   if (!pageSectionEntry.fields.pageSectionParts) {
     return {
       pageSectionName: "",
-      heading: "",
+      heading: { id: "", content: "" },
       subheading: "",
       description: "",
       img: null,
@@ -50,10 +50,10 @@ export function parseContentfulOpenSourceSection1(
 
   const sectionGeneralContentCard1 = pageSectionEntry.fields
     .pageSectionParts[0] as TypeGeneralContentCard<undefined, string>;
-  // console.log(
-  //   "INSIDE parseContentfulOpenSourceSection1: ",
-  //   sectionGeneralContentCard1
-  // );
+  console.log(
+    "INSIDE parseContentfulOpenSourceSection1: ",
+    sectionGeneralContentCard1.sys.id
+  );
 
   const image = sectionGeneralContentCard1.fields.media;
   const cta = sectionGeneralContentCard1.fields.ctas as JsonCta;
@@ -67,7 +67,10 @@ export function parseContentfulOpenSourceSection1(
 
   return {
     pageSectionName: sectionGeneralContentCard1.fields.pageSectionName || "",
-    heading: sectionGeneralContentCard1.fields.heading || "",
+    heading: {
+      id: sectionGeneralContentCard1.sys.id,
+      content: sectionGeneralContentCard1.fields.heading || "",
+    },
     subheading: sectionGeneralContentCard1.fields.subheading || "",
     description: sectionGeneralContentCard1.fields.descriptionText || "",
     img: parsedImg,

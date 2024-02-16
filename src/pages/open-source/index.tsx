@@ -22,14 +22,13 @@ type OpenSourcePageProps = {
 
 export default function OpenSourcePage({ content }: OpenSourcePageProps) {
   const liveContent = useContentfulLiveUpdates(content);
-  const inspectorProps = useContentfulInspectorMode();
 
   if (!liveContent.fields.pageSection) {
     console.log("no pageSection");
     return null;
   }
 
-  console.log("LIVE CONTENT: ", liveContent);
+  // console.log("LIVE CONTENT: ", liveContent);
 
   const section1Data = parseContentfulOpenSourceSection1(
     liveContent.fields.pageSection[0] as TypePageSection<undefined, string>

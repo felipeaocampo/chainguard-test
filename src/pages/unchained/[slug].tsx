@@ -125,7 +125,7 @@ export default function BlogPost({ blogContent }: { blogContent: Document }) {
   const post = useContentfulLiveUpdates(blogContent);
   //console.log("/UNCHAINED/[SLUG]: ORIGINAL", blogContent);
   //console.log("/UNCHAINED/[SLUG]: POST", post);
-  console.log("slug page has run");
+  // console.log("slug page has run");
 
   useEffect(() => {
     // hljs.initHighlighting();
