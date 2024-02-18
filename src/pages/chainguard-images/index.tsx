@@ -1,17 +1,75 @@
 import { GetStaticProps } from "next";
+import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
+import { GeneralContentCard, GeneralPage } from "@/schema";
 
-export default function ChainguardImagesPage() {
-  return <h1>Chainguard Images Page</h1>;
+const query = `
+query {
+  openSourcePageData: generalPage(id: "6nhKPVtrhOpI6NQ9FGv8ia") {
+     pageName
+     pageSectionCollection(limit: 10) {
+       items {
+         pageSectionPartsCollection(limit: 10) {
+           items {
+             ... on GeneralContentCard {
+               sys {
+                 id
+               }
+               heading
+               subheading
+               descriptionText
+               mediaCollection(limit: 10) {
+                 items {
+                   url
+                   description
+                   width
+                   height
+                 }
+               }
+               ctas 
+             }
+           }
+         }
+       }
+     }
+   }
+ }
+`;
+
+type ChainguardImagesProps = {
+  openSourcePageData: GeneralPage;
+};
+
+export default function ChainguardImagesPage({
+  openSourcePageData,
+}: ChainguardImagesProps) {
+  const x = openSourcePageData.pageName;
+  const u = openSourcePageData.pageSectionCollection?.items[0]
+    ?.pageSectionPartsCollection?.items[0] as GeneralContentCard;
+
+  console.log("PAGE: ", openSourcePageData);
+  return <h1>{u.heading}Page</h1>;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const res = await client.getEntries({ content_type: "navBar" });
-  // console.log("NAVBAR: ", res);
-  // console.log("client token1: ", client.space);
+  const res = await fetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+      },
+      body: JSON.stringify({ query }),
+    }
+  );
 
-  // console.log("hey from the images page!");
+  const data = await res.json();
+
+  console.log("DATA: ", data);
 
   return {
-    props: {},
+    props: {
+      openSourcePageData: data.data.openSourcePageData,
+    },
   };
 };
