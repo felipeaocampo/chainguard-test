@@ -50,10 +50,10 @@ export function parseContentfulOpenSourceSection1(
 
   const sectionGeneralContentCard1 = pageSectionEntry.fields
     .pageSectionParts[0] as TypeGeneralContentCard<undefined, string>;
-  console.log(
-    "INSIDE parseContentfulOpenSourceSection1: ",
-    sectionGeneralContentCard1.sys.id
-  );
+  // console.log(
+  //   "INSIDE parseContentfulOpenSourceSection1: ",
+  //   sectionGeneralContentCard1.sys.id
+  // );
 
   const image = sectionGeneralContentCard1.fields.media;
   const cta = sectionGeneralContentCard1.fields.ctas as JsonCta;

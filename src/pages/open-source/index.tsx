@@ -4,7 +4,6 @@ import {
   TypeGeneralPage,
   TypeGeneralPageSkeleton,
   TypePageSection,
-  TypeTestContentSkeleton,
 } from "../../../types/contentful";
 import {
   useContentfulLiveUpdates,
