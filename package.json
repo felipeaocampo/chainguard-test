@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "npm run gen && next dev",
+    "build": "npm run gen && next build",
+    "start": "npm run gen && next start",
     "lint": "next lint",
     "cf-export": "contentful space export --config contentful/export-config.json --management-token $cftoken --space-id $spaceId",
     "cf-generate-types": "cf-content-types-generator -X contentful/export.json --out types/contentful",
-    "gen": "graphql-codegen --config codegen.yml -r dotenv/config",
-    "gen2": "node src/lib/prepareCodeGenConfig.js && graphql-codegen --config codegen.temp.yml -r dotenv/config"
+    "gen": "graphql-codegen --config codegen.yml -r dotenv/config"
   },
   "dependencies": {
     "@contentful/live-preview": "^2.17.3",
