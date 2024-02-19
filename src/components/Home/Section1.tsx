@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ContentImage } from "@/lib/contentImage";
 import { HomePageProps } from "@/pages";
+import gql from "graphql-tag";
 
 export type HomeSection1Props = {
   heroHeading: string;
@@ -12,6 +13,16 @@ export type HomeSection1Props = {
   floatingHeaderLink: string;
   floatingHeaderText: string;
 };
+
+export const GetPageNamesDocument = gql`
+  query getPageNames {
+    generalPageCollection {
+      items {
+        pageName
+      }
+    }
+  }
+`;
 
 export default function HomeSection1({
   section1Props,

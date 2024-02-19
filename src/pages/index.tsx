@@ -21,6 +21,7 @@ import HomeSection4, { HomeSection4Props } from "@/components/Home/Section4";
 import HomeSection5, { HomeSection5Props } from "@/components/Home/Section5";
 import HomeSection6, { HomeSection6Props } from "@/components/Home/Section6";
 import { GetStaticProps } from "next";
+import { getHomePageData } from "@/lib/graphql/requests";
 
 export type HomePageProps = {
   section1Props: HomeSection1Props;
@@ -137,7 +138,10 @@ export const getStaticProps: GetStaticProps = async ({ preview }) => {
     section1Data?.floatingHeaderText
   );
 
-  // console.log(section6Data);
+  ///START GRAPHQL REQUEST TEST //////
+  const test = await getHomePageData(preview);
+  // console.log(test);
+  ///END GRAPHQL REQUEST TEST //////
 
   //3RD: SET CONTENT INTO PROPS
   return {
