@@ -55,9 +55,12 @@ export default function HomeSection2({
                   height={testimonialCardData.testimonialLogo.height}
                 />
               </div>
-              <p className="mb-[24px] h-[72px] overflow-y-clip relative after:content-['...'] after:bottom-0 after:right-0 after:translate-x-[-10px] after:absolute">
+              <p className="mb-[24px] line-clamp-3">
                 {testimonialCardData.testimonial}
               </p>
+              {/* <p className="mb-[24px] h-[72px] overflow-y-clip relative after:content-['...'] after:bottom-0 after:right-0 after:translate-x-[-10px] after:absolute">
+                {testimonialCardData.testimonial}
+              </p> */}
               <div className="testimonial-card-bottom flex justify-between">
                 <div className="testimonial-user flex flex-col">
                   <p>{testimonialCardData.customerName}</p>
