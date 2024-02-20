@@ -52,6 +52,3 @@
 }
 
 
-yarn add graphql @contentful/rich-text-react-renderer dotenv swiper 
-
-yarn add --dev @graphql-codegen/cli @contentful/rich-text-types @graphql-codegen/client-preset @graphql-codegen/introspection typescript-graphql-request
