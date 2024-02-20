@@ -1,0 +1,40 @@
+query getUnchainedPageData($preview: Boolean) {
+  generalPage(id: "3LsilfHAYjrs43IFfpCAdN", preview: $preview) {
+    pageSectionCollection(limit: 10) {
+      items {
+        pageSectionPartsCollection(limit: 5) {
+          items {
+            __typename
+            ... on GeneralContentCard {
+              heading
+              subheading
+              descriptionText
+              ctas
+            }
+            ... on Blogs {
+              featuredBlogsCollection(limit: 5) {
+                items {
+                  __typename
+                  ... on Blog {
+                    blogName
+                    metaAbout
+                    blogSlug
+                    authors
+                    mainImage {
+                      url
+                      description
+                      width
+                      height
+                    }
+                    datePublished
+                    tags
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

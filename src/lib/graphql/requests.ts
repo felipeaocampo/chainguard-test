@@ -1,15 +1,19 @@
-import { GeneralPage } from "@/schema";
+import {
+  GetHomePageDataQuery,
+  GetHomePageDataQueryVariables,
+} from "@/lib/graphql/schema";
 import { gqlClient, gqlPreviewClient } from "./clientGql";
 import { getHomePageQuery } from "./queries";
-
-type PreviewVar = {
-  preview: boolean;
-};
 
 export const getHomePageData = async (preview = false) => {
   const client = preview ? gqlPreviewClient : gqlClient;
 
-  return client.request<GeneralPage, PreviewVar>(getHomePageQuery, { preview });
+  return client.request<GetHomePageDataQuery, GetHomePageDataQueryVariables>(
+    getHomePageQuery,
+    {
+      preview,
+    }
+  );
 };
 
 /*

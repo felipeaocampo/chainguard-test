@@ -1,0 +1,10 @@
+query getOpenSourcePageData($preview: Boolean!) {
+  generalPage(id: "6nhKPVtrhOpI6NQ9FGv8ia", preview: $preview) {
+    pageName
+    pageSlug
+    pageMetadata {
+      pageTitle
+      metaDescription
+    }
+  }
+}
