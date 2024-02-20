@@ -1,4 +1,8 @@
 import { client, previewClient } from "@/lib/client";
+import {
+  client as clientCodeGen,
+  previewClient as previewClientCodeGen,
+} from "@/lib/clientCodeGen";
 import { parseContentfulContentImage } from "@/lib/contentImage";
 
 import {
@@ -30,7 +34,6 @@ export type HomePageProps = {
   section4Props: HomeSection4Props;
   section5Props: HomeSection5Props;
   section6Props: HomeSection6Props;
-  // preview: Boolean;
 };
 
 export default function Home({
@@ -41,8 +44,6 @@ export default function Home({
   section5Props,
   section6Props,
 }: HomePageProps) {
-  //
-
   return (
     <main className="font-sans overflow-hidden border-b solid w-full">
       <div className="w-full bg-hero-cg-gradient">
@@ -57,7 +58,7 @@ export default function Home({
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ preview }) => {
+export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
   const contentful = preview ? previewClient : client;
 
   const page = await contentful.getEntries<TypeGeneralPageSkeleton>({
@@ -142,6 +143,13 @@ export const getStaticProps: GetStaticProps = async ({ preview }) => {
   const test = await getHomePageData(preview);
   // console.log(test);
   ///END GRAPHQL REQUEST TEST //////
+
+  ///START CODE GEN SDK REQUEST TEST //////
+  const graphqlClient = preview ? previewClientCodeGen : clientCodeGen;
+
+  const asdf = await graphqlClient.getUnchainedPageData({ preview });
+  // console.log(asdf);
+  ///END CODE GEN SDK REQUEST TEST //////
 
   //3RD: SET CONTENT INTO PROPS
   return {

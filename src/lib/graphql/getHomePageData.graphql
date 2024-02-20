@@ -1,0 +1,6 @@
+query getHomePageData($preview: Boolean!) {
+  generalPage(id: "4GpCxSdhnotHZfV2tQgKoh", preview: $preview) {
+    pageName
+    pageSlug
+  }
+}

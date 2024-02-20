@@ -1,22 +1,18 @@
 import { GraphQLClient } from "graphql-request";
 
-export const gqlClient = new GraphQLClient(
-  "https://graphql.contentful.com/content/v1/spaces/5osmwku1bn9f/environments/master",
-  {
-    headers: {
-      authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
-    },
-  }
-);
+export const endpoint = `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}/environments/master`;
 
-export const gqlPreviewClient = new GraphQLClient(
-  "https://graphql.contentful.com/content/v1/spaces/5osmwku1bn9f/environments/master",
-  {
-    headers: {
-      authorization: `Bearer ${process.env.CONTENT_PREVIEW_ACCESS_TOKEN}`,
-    },
-  }
-);
+export const gqlClient = new GraphQLClient(endpoint, {
+  headers: {
+    authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
+  },
+});
+
+export const gqlPreviewClient = new GraphQLClient(endpoint, {
+  headers: {
+    authorization: `Bearer ${process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN}`,
+  },
+});
 
 /*
 VARS EXAMPLE 

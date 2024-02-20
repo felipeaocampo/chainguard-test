@@ -3,7 +3,10 @@ schema:
   - https://graphql.contentful.com/content/v1/spaces/${CONTENTFUL_SPACE_ID}/environments/master:
       headers:
         Authorization: "Bearer ${CONTENTFUL_ACCESS_TOKEN}"
+documents:
+  - "src/**/!(*.d).{ts,tsx}"
 generates:
-  src/schema.ts:
+  src/lib/graphql/schema.ts:
     plugins:
       - typescript
+      - typescript-operations

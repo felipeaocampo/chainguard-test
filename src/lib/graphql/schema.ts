@@ -2445,3 +2445,22 @@ export type CfpageSectionPartsMultiTypeNestedFilter = {
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
   sys?: InputMaybe<SysFilter>;
 };
+
+export type GetPageNamesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetPageNamesQuery = { __typename?: 'Query', generalPageCollection?: { __typename?: 'GeneralPageCollection', items: Array<{ __typename?: 'GeneralPage', pageName?: string | null } | null> } | null };
+
+export type GetHomePageDataQueryVariables = Exact<{
+  preview: Scalars['Boolean']['input'];
+}>;
+
+
+export type GetHomePageDataQuery = { __typename?: 'Query', generalPage?: { __typename?: 'GeneralPage', pageName?: string | null, pageSlug?: string | null } | null };
+
+export type GetOpenSourcePageDataQueryVariables = Exact<{
+  preview: Scalars['Boolean']['input'];
+}>;
+
+
+export type GetOpenSourcePageDataQuery = { __typename?: 'Query', generalPage?: { __typename?: 'GeneralPage', pageName?: string | null, pageSlug?: string | null, pageMetadata?: { __typename?: 'SeoMetadata', pageTitle?: string | null, metaDescription?: string | null } | null } | null };
