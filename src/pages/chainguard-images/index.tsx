@@ -1,6 +1,5 @@
 import { GetStaticProps } from "next";
 import { useContentfulLiveUpdates } from "@contentful/live-preview/react";
-import { GeneralContentCard, GeneralPage } from "@/schema";
 
 const query = `
 query {
@@ -35,19 +34,9 @@ query {
  }
 `;
 
-type ChainguardImagesProps = {
-  openSourcePageData: GeneralPage;
-};
-
-export default function ChainguardImagesPage({
-  openSourcePageData,
-}: ChainguardImagesProps) {
-  const x = openSourcePageData.pageName;
-  const u = openSourcePageData.pageSectionCollection?.items[0]
-    ?.pageSectionPartsCollection?.items[0] as GeneralContentCard;
-
+export default function ChainguardImagesPage({ openSourcePageData }: any) {
   console.log("PAGE: ", openSourcePageData);
-  return <h1>{u.heading}Page</h1>;
+  return <h1>Page</h1>;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
